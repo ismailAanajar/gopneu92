@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Roboto, Roboto_Serif } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header";
+import Footer from "@/components/footer";
+import Script from "next/script";
 
 const geistMono = Roboto({
   variable: "--font-geist-mono",
@@ -23,6 +25,26 @@ export default function RootLayout({
       <body className={` ${geistMono.variable} antialiased`}>
         <Header />
         {children}
+        <Footer />
+
+        <Script type="text/javascript">
+          {`
+   (function(d, t) {
+      var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+      v.onload = function() {
+        window.voiceflow.chat.load({
+          verify: { projectID: '676fe1e7cbabbcd8e3fc3a56' },
+          url: 'https://general-runtime.voiceflow.com',
+          versionID: 'production',
+          voice: {
+            url: "https://runtime-api.voiceflow.com"
+          }
+        });
+      }
+      v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+  })(document, 'script');
+  `}
+        </Script>
       </body>
     </html>
   );

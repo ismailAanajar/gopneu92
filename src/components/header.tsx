@@ -101,7 +101,7 @@ const Header = () => {
           <span className="absolute bottom-0 left-0 w-full h-0.5 bg-blue-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-300" />
         </Link>
         <Link
-          href="#"
+          href="/contact"
           className={cn(
             "text-base font-medium text-white hover:text-blue-500 transition-colors relative group",
             {
