@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import { ChevronRight, Phone, Mail, MapPin, Clock, Wrench } from "lucide-react";
 
