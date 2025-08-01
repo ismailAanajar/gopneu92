@@ -29,9 +29,9 @@ export default function ContactPage() {
     <div className="flex flex-col min-h-screen bg-gray-50 text-foreground font-sans">
       <main className="flex-1">
         {/* Contact Hero Section */}
-        <section className="w-full py-20 md:py-32 bg-gradient-to-r from-blue-800 to-blue-950 relative overflow-hidden pt-32">
+        <section className="w-full py-20 md:py-32 bg-gradient-to-r from-blue-800/40 to-blue-950 relative overflow-hidden pt-32">
           <Image
-            src="/images/illustration-voiture.webp"
+            src="/banner.jpg"
             alt="Car illustration"
             layout="fill"
             objectFit="cover"
@@ -50,12 +50,8 @@ export default function ContactPage() {
               délais.
             </p>
           </div>
-        </section>
-
-        {/* Contact Form and Info Section */}
-        <section className="w-full py-20 md:py-32 bg-white relative overflow-hidden">
-          {/* Top wave */}
-          <div className="absolute top-0 left-0 w-full h-16 md:h-20 lg:h-24 text-blue-950 transform rotate-180">
+          {/* Wave separator */}
+          <div className="absolute bottom-0 left-0 w-full h-24 md:h-32 lg:h-48 text-white">
             <svg
               viewBox="0 0 1440 320"
               xmlns="http://www.w3.org/2000/svg"
@@ -64,10 +60,14 @@ export default function ContactPage() {
             >
               <path
                 fill="currentColor"
-                d="M0,96L48,112C96,128,192,160,288,186.7C384,213,480,235,576,213.3C672,192,768,128,864,128C960,128,1056,192,1152,208C1248,224,1344,192,1392,176L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+                d="M0,224L48,213.3C96,203,192,181,288,186.7C384,192,480,224,576,245.3C672,267,768,277,864,256C960,235,1056,181,1152,160C1248,139,1344,149,1392,154.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
               ></path>
             </svg>
           </div>
+        </section>
+
+        {/* Contact Form and Info Section */}
+        <section className="w-full py-20 md:py-32 bg-white relative overflow-hidden">
           <div className="container mx-auto px-6 md:px-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             {/* Contact Form */}
             <Card className="p-8 md:p-10 shadow-xl rounded-2xl border border-gray-100 bg-white">

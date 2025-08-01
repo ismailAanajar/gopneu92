@@ -30,7 +30,7 @@ export default function ServicesPage() {
         {/* Services Hero Section - Clean and impactful */}
         <section className="w-full py-20 md:py-32 bg-gradient-to-r from-blue-800/40 to-blue-950 relative overflow-hidden pt-32">
           <Image
-            src="/illustration-voiture .webp"
+            src="/banner.jpg"
             alt="Car illustration"
             layout="fill"
             objectFit="cover"

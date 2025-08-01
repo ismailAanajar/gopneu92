@@ -12,10 +12,10 @@ export default function AboutPage() {
 
       <main className="flex-1">
         {/* About Hero Section */}
-        <section className="w-full py-20 md:py-32  bg-blue-700  relative overflow-hidden pt-32">
+        <section className="w-full py-20 md:py-32 bg-gradient-to-r from-blue-800/40 to-blue-950 relative overflow-hidden pt-32">
           <div className="absolute inset-0 z-0">
             <Image
-              src="/illustration-voiture .webp"
+              src="/banner.jpg"
               alt="Car illustration"
               width={1000}
               height={500}
@@ -32,12 +32,8 @@ export default function AboutPage() {
               offrir le meilleur service pneumatique à Meudon.
             </p>
           </div>
-        </section>
-
-        {/* Our Story/Mission Section */}
-        <section className="w-full py-20 md:py-32 bg-white relative overflow-hidden">
-          {/* Top wave */}
-          <div className="absolute top-0 left-0 w-full h-16 md:h-20 lg:h-24 text-blue-700 transform rotate-180">
+          {/* Wave separator */}
+          <div className="absolute bottom-0 left-0 w-full h-24 md:h-32 lg:h-48 text-white">
             <svg
               viewBox="0 0 1440 320"
               xmlns="http://www.w3.org/2000/svg"
@@ -46,10 +42,14 @@ export default function AboutPage() {
             >
               <path
                 fill="currentColor"
-                d="M0,96L48,112C96,128,192,160,288,186.7C384,213,480,235,576,213.3C672,192,768,128,864,128C960,128,1056,192,1152,208C1248,224,1344,192,1392,176L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+                d="M0,224L48,213.3C96,203,192,181,288,186.7C384,192,480,224,576,245.3C672,267,768,277,864,256C960,235,1056,181,1152,160C1248,139,1344,149,1392,154.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
               ></path>
             </svg>
           </div>
+        </section>
+
+        {/* Our Story/Mission Section */}
+        <section className="w-full py-20 md:py-32 bg-white relative overflow-hidden">
           <div className="container mx-auto px-6 md:px-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="lg:order-1 text-center lg:text-left">
               <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
