@@ -115,7 +115,7 @@ const Header = () => {
         </Link>
       </nav>
       <a
-        className=" lg:block"
+        className="ml-auto mr-4 lg:block"
         href="whatsapp://send?text=Hello World!&phone=+212709446968"
       >
         <svg
