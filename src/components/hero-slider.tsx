@@ -68,9 +68,9 @@ export function HeroSlider({ slides, interval = 7000 }: HeroSliderProps) {
             alt={slides[currentSlide].title}
             layout="fill"
             objectFit="cover"
-            className="z-0"
+            className="z-0 opacity-50"
           />
-          <div className="absolute inset-0  bg-gradient-to-r from-blue-800/40 to-blue-950 z-10" />
+          <div className="absolute inset-0  bg-gradient-to-r to-blue-800/30 from-blue-950 z-10" />
         </motion.div>
       </AnimatePresence>
 
@@ -104,10 +104,10 @@ export function HeroSlider({ slides, interval = 7000 }: HeroSliderProps) {
                 )
               );
             })()} */}
-            <h2 className="text-4xl md:text-6xl  font-bold leading-tight mb-4">
+            <h2 className="text-3xl md:text-6xl  font-bold leading-tight mb-4">
               {slides[currentSlide].title}
             </h2>
-            <p className="text-md md:text-lg max-w-2xl  mb-8">
+            <p className="text-base md:text-lg max-w-2xl  mb-8">
               {slides[currentSlide].description}
             </p>
             <Link href={slides[currentSlide].buttonLink} passHref>

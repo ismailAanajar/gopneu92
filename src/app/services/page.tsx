@@ -28,13 +28,13 @@ export default function ServicesPage() {
 
       <main className="flex-1">
         {/* Services Hero Section - Clean and impactful */}
-        <section className="w-full py-20 md:py-32 bg-gradient-to-r from-blue-800/40 to-blue-950 relative overflow-hidden pt-32">
+        <section className="w-full py-20 md:py-32 bg-gradient-to-r from-blue-800/30 to-blue-950 relative overflow-hidden pt-32">
           <Image
             src="/banner.jpg"
             alt="Car illustration"
             layout="fill"
             objectFit="cover"
-            className="absolute inset-0 z-0 opacity-20"
+            className="absolute  right-0 bottom-0 h-full w-full object-cover opacity-10"
           />
           <div className="absolute inset-0 bg-blue-950/60 z-0" />
           <div className="container mx-auto px-6 md:px-10 relative z-10 text-white text-center">

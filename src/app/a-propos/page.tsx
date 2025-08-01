@@ -19,7 +19,7 @@ export default function AboutPage() {
               alt="Car illustration"
               width={1000}
               height={500}
-              className="absolute  right-0 bottom-0 h-full w-auto object-contain opacity-5"
+              className="absolute  right-0 bottom-0 h-full w-full object-cover opacity-5"
             />
           </div>
           <div className="container mx-auto px-6 md:px-10 relative z-10 text-white text-center">
