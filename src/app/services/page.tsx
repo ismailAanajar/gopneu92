@@ -227,7 +227,7 @@ export default function ServicesPage() {
             </h2>
 
             {/* Top two pricing summary blocks */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12 max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12 mx-auto">
               {/* Pneus neufs summary */}
               <Card className="bg-white/15 backdrop-blur-sm rounded-2xl  border border-white/30 overflow-hidden flex flex-col items-center p-8  ">
                 <CardHeader className="p-0 flex flex-col items-center w-full mb-4">
@@ -268,11 +268,11 @@ export default function ServicesPage() {
             </div>
 
             {/* Third section: Detailed pricing grid for all sizes */}
-            <div className="bg-white/15 backdrop-blur-sm   border border-gray-300  rounded-2xl  overflow-hidden p-8 max-w-6xl mx-auto">
+            <div className="bg-white/15 backdrop-blur-sm   border border-gray-300  rounded-2xl  overflow-hidden p-8    mx-auto">
               <h3 className="text-3xl font-bold mb-8 text-center text-yellow-400 drop-shadow-md">
                 Prix pour 2 pneus montés et équilibrés
               </h3>
-              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+              <div className="grid grid-cols-2 sm:grid-cols-3  gap-6">
                 {[
                   { size: "13 pouces", price: "70 €" },
                   { size: "14 pouces", price: "70 €" },
