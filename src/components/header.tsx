@@ -22,6 +22,9 @@ import {
   CheckCircle,
   ShieldCheck,
   Users,
+  Calendar1Icon,
+  CalendarDays,
+  CalendarDaysIcon,
 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
@@ -264,14 +267,16 @@ const Header = () => {
           </Sheet>
 
           <Button
+            title="Prendre Rendez-vous"
             asChild
+            size={"icon"}
             className="hidden md:inline-flex bg-blue-700 hover:bg-blue-800 text-white   shadow-md hover:shadow-lg transition-all duration-300"
           >
             <Link
               href={"https://calendly.com/omaranajar/new-meeting"}
               target="_blank"
             >
-              Prendre Rendez-vous
+              <CalendarDaysIcon />
             </Link>
           </Button>
         </div>

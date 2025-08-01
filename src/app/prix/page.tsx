@@ -1,6 +1,5 @@
 import Image from "next/image";
-import { ChevronRight, Check, Star, Euro, Wrench, Shield } from "lucide-react";
-
+import { ChevronRight, Star, Shield, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -9,565 +8,406 @@ import {
   CardHeader,
   CardDescription,
 } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 
-export default function PricingPage() {
+export default function PrixPage() {
+  const pricingData = [
+    { size: "13 pouces", price: "70 €", category: "standard" },
+    { size: "14 pouces", price: "70 €", category: "standard" },
+    { size: "15 pouces", price: "70 €", category: "standard" },
+    { size: "16 pouces", price: "80 €", category: "premium" },
+    { size: "17 pouces", price: "100 €", category: "premium" },
+    { size: "18 pouces", price: "120 €", category: "sport" },
+    { size: "19 pouces", price: "120 €", category: "sport" },
+    { size: "20 pouces", price: "120 €", category: "sport" },
+    { size: "Taille en C", price: "100 €", category: "commercial" },
+  ];
+
   return (
-    <div className="flex flex-col min-h-screen bg-gray-50 text-foreground font-sans">
-      <main className="flex-1">
-        {/* Pricing Hero Section */}
-        <section className="w-full py-20 md:py-32 bg-gradient-to-r from-blue-700 to-blue-900 relative overflow-hidden pt-32">
-          <div className="absolute inset-0 z-0">
-            <Image
-              src="/illustration-voiture .webp"
-              alt="Car illustration"
-              width={1000}
-              height={500}
-              className="absolute right-0 bottom-0 h-full w-auto object-contain opacity-10"
-            />
-          </div>
-          <div className="container mx-auto px-6 md:px-10 relative z-10 text-white text-center">
-            <Euro className="h-20 w-20 mx-auto mb-6 text-yellow-400 drop-shadow-lg" />
-            <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-6 drop-shadow-md">
-              Nos Tarifs
-              <span className="block w-24 h-1 bg-yellow-500 mx-auto mt-4 rounded-full" />
+    <main className="min-h-screen bg-gray-50">
+      {/* Hero Section with Modern Design */}
+      <section className="w-full py-20 md:py-32 bg-gradient-to-r from-blue-800/30 to-blue-950 relative overflow-hidden pt-32">
+        <Image
+          src="/banner.jpg"
+          alt="Car illustration"
+          layout="fill"
+          objectFit="cover"
+          className="absolute  right-0 bottom-0 h-full w-full object-cover opacity-10"
+        />
+        {/* Animated background elements */}
+        <div className="absolute inset-0">
+          <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-yellow-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-r from-blue-500/5 to-yellow-500/5 rounded-full blur-3xl"></div>
+        </div>
+
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="text-center max-w-4xl mx-auto">
+            <div className="inline-flex items-center gap-2 bg-yellow-500/20 text-yellow-300 px-4 py-2 rounded-full text-sm font-medium mb-6">
+              <Star className="w-4 h-4" />
+              Tarifs transparents et compétitifs
+            </div>
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              Nos <span className="text-yellow-400">Tarifs</span>
             </h1>
-            <p className="text-xl md:text-2xl mb-10 max-w-3xl mx-auto opacity-95 leading-relaxed">
-              Découvrez nos prix transparents et compétitifs pour tous vos
-              besoins en pneumatiques et services associés.
+            <p className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed">
+              Découvrez nos prix clairs et sans surprise pour tous vos besoins
+              en pneumatiques
             </p>
           </div>
-        </section>
+        </div>
+        {/* Bottom wave */}
+        <div className="absolute bottom-0 left-0 w-full h-24 md:h-32 lg:h-48 text-gray-50">
+          <svg
+            viewBox="0 0 1440 320"
+            xmlns="http://www.w3.org/2000/svg"
+            className="w-full h-full"
+            preserveAspectRatio="none"
+          >
+            <path
+              fill="currentColor"
+              d="M0,224L48,213.3C96,203,192,181,288,186.7C384,192,480,224,576,245.3C672,267,768,277,864,256C960,235,1056,181,1152,160C1248,139,1344,149,1392,154.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+            ></path>
+          </svg>
+        </div>
+      </section>
 
-        {/* Tire Pricing Section */}
-        <section className="w-full py-20 md:py-32 bg-white relative overflow-hidden">
-          {/* Top wave */}
-          <div className="absolute top-0 left-0 w-full h-16 md:h-20 lg:h-24 text-blue-700 transform rotate-180">
-            <svg
-              viewBox="0 0 1440 320"
-              xmlns="http://www.w3.org/2000/svg"
-              className="w-full h-full"
-              preserveAspectRatio="none"
-            >
-              <path
-                fill="currentColor"
-                d="M0,96L48,112C96,128,192,160,288,186.7C384,213,480,235,576,213.3C672,192,768,128,864,128C960,128,1056,192,1152,208C1248,224,1344,192,1392,176L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-              ></path>
-            </svg>
-          </div>
-          <div className="container mx-auto px-6 md:px-10">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
-                Tarifs des Pneumatiques
-                <span className="block w-24 h-1 bg-blue-700 mx-auto mt-4 rounded-full" />
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Prix indicatifs selon les dimensions et marques. Devis
-                personnalisé sur demande.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
-              {/* New Tires */}
-              <Card className="p-8 shadow-xl rounded-2xl border border-gray-100 bg-white">
-                <CardHeader className="p-0 mb-8">
-                  <div className="flex items-center justify-between mb-4">
-                    <CardTitle className="text-3xl font-bold text-gray-800">
-                      Pneus Neufs
-                    </CardTitle>
-                    <Badge className="bg-green-100 text-green-800 px-3 py-1">
-                      Garantie 2 ans
-                    </Badge>
+      {/* Main Pricing Cards */}
+      <section className="py-20 relative bg-gray-50">
+        <div className="container mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto mb-20">
+            {/* New Tires Card */}
+            <div className="group">
+              <Card className="relative overflow-hidden bg-gradient-to-br from-blue-600 to-blue-700 border-0 shadow-2xl transform transition-all duration-500 ">
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-transparent"></div>
+                <CardHeader className="relative z-10 text-center p-8">
+                  <div className="w-24 h-24 mx-auto mb-6 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm">
+                    <Image
+                      src="/pneus-neufs-icone.webp"
+                      width={48}
+                      height={48}
+                      alt="Pneus neufs"
+                      className="w-12 h-12"
+                    />
                   </div>
-                  <CardDescription className="text-lg text-gray-600">
-                    Pneumatiques neufs de grandes marques avec garantie
-                    constructeur.
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="p-0 space-y-6">
-                  <div className="space-y-4">
-                    <div className="flex justify-between items-center p-4 bg-gray-50 rounded-lg">
-                      <div>
-                        <h4 className="font-semibold text-gray-800">
-                          Tourisme (13"-16")
-                        </h4>
-                        <p className="text-sm text-gray-600">
-                          Michelin, Continental, Bridgestone
-                        </p>
-                      </div>
-                      <div className="text-right">
-                        <p className="text-2xl font-bold text-blue-700">
-                          80€ - 150€
-                        </p>
-                        <p className="text-sm text-gray-500">par pneu</p>
-                      </div>
-                    </div>
-                    <div className="flex justify-between items-center p-4 bg-gray-50 rounded-lg">
-                      <div>
-                        <h4 className="font-semibold text-gray-800">
-                          SUV/4x4 (17"-20")
-                        </h4>
-                        <p className="text-sm text-gray-600">
-                          Toutes marques premium
-                        </p>
-                      </div>
-                      <div className="text-right">
-                        <p className="text-2xl font-bold text-blue-700">
-                          120€ - 300€
-                        </p>
-                        <p className="text-sm text-gray-500">par pneu</p>
-                      </div>
-                    </div>
-                    <div className="flex justify-between items-center p-4 bg-gray-50 rounded-lg">
-                      <div>
-                        <h4 className="font-semibold text-gray-800">
-                          Utilitaire
-                        </h4>
-                        <p className="text-sm text-gray-600">
-                          Renforcés, haute résistance
-                        </p>
-                      </div>
-                      <div className="text-right">
-                        <p className="text-2xl font-bold text-blue-700">
-                          90€ - 200€
-                        </p>
-                        <p className="text-sm text-gray-500">par pneu</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="pt-4 border-t border-gray-200">
-                    <div className="flex items-center gap-2 text-green-600 mb-2">
-                      <Check className="h-5 w-5" />
-                      <span className="font-medium">
-                        Garantie constructeur 2 ans
-                      </span>
-                    </div>
-                    <div className="flex items-center gap-2 text-green-600">
-                      <Check className="h-5 w-5" />
-                      <span className="font-medium">
-                        Montage et équilibrage inclus
-                      </span>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-
-              {/* Used Tires */}
-              <Card className="p-8 shadow-xl rounded-2xl border border-gray-100 bg-white">
-                <CardHeader className="p-0 mb-8">
-                  <div className="flex items-center justify-between mb-4">
-                    <CardTitle className="text-3xl font-bold text-gray-800">
-                      Pneus d'Occasion
-                    </CardTitle>
-                    <Badge className="bg-blue-100 text-blue-800 px-3 py-1">
-                      Contrôlés
-                    </Badge>
-                  </div>
-                  <CardDescription className="text-lg text-gray-600">
-                    Pneumatiques d'occasion sélectionnés et contrôlés, excellent
-                    rapport qualité-prix.
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="p-0 space-y-6">
-                  <div className="space-y-4">
-                    <div className="flex justify-between items-center p-4 bg-gray-50 rounded-lg">
-                      <div>
-                        <h4 className="font-semibold text-gray-800">
-                          Tourisme (13"-16")
-                        </h4>
-                        <p className="text-sm text-gray-600">
-                          Usure 50%, grandes marques
-                        </p>
-                      </div>
-                      <div className="text-right">
-                        <p className="text-2xl font-bold text-blue-700">
-                          35€ - 80€
-                        </p>
-                        <p className="text-sm text-gray-500">par pneu</p>
-                      </div>
-                    </div>
-                    <div className="flex justify-between items-center p-4 bg-gray-50 rounded-lg">
-                      <div>
-                        <h4 className="font-semibold text-gray-800">
-                          SUV/4x4 (17"-20")
-                        </h4>
-                        <p className="text-sm text-gray-600">
-                          Contrôlés et testés
-                        </p>
-                      </div>
-                      <div className="text-right">
-                        <p className="text-2xl font-bold text-blue-700">
-                          60€ - 150€
-                        </p>
-                        <p className="text-sm text-gray-500">par pneu</p>
-                      </div>
-                    </div>
-                    <div className="flex justify-between items-center p-4 bg-gray-50 rounded-lg">
-                      <div>
-                        <h4 className="font-semibold text-gray-800">
-                          Utilitaire
-                        </h4>
-                        <p className="text-sm text-gray-600">
-                          Bon état général
-                        </p>
-                      </div>
-                      <div className="text-right">
-                        <p className="text-2xl font-bold text-blue-700">
-                          45€ - 100€
-                        </p>
-                        <p className="text-sm text-gray-500">par pneu</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="pt-4 border-t border-gray-200">
-                    <div className="flex items-center gap-2 text-green-600 mb-2">
-                      <Check className="h-5 w-5" />
-                      <span className="font-medium">
-                        Contrôle qualité systématique
-                      </span>
-                    </div>
-                    <div className="flex items-center gap-2 text-green-600">
-                      <Check className="h-5 w-5" />
-                      <span className="font-medium">
-                        Montage et équilibrage inclus
-                      </span>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-          {/* Bottom wave */}
-          <div className="absolute bottom-0 left-0 w-full h-16 md:h-20 lg:h-24 text-gray-100">
-            <svg
-              viewBox="0 0 1440 320"
-              xmlns="http://www.w3.org/2000/svg"
-              className="w-full h-full"
-              preserveAspectRatio="none"
-            >
-              <path
-                fill="currentColor"
-                d="M0,224L48,213.3C96,203,192,181,288,186.7C384,192,480,224,576,245.3C672,267,768,277,864,256C960,235,1056,181,1152,160C1248,139,1344,149,1392,154.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-              ></path>
-            </svg>
-          </div>
-        </section>
-
-        {/* Services Pricing Section */}
-        <section className="w-full py-20 md:py-32 bg-gray-100 relative overflow-hidden">
-          {/* Top wave */}
-          <div className="absolute top-0 left-0 w-full h-16 md:h-20 lg:h-24 text-white transform rotate-180">
-            <svg
-              viewBox="0 0 1440 320"
-              xmlns="http://www.w3.org/2000/svg"
-              className="w-full h-full"
-              preserveAspectRatio="none"
-            >
-              <path
-                fill="currentColor"
-                d="M0,224L48,213.3C96,203,192,181,288,186.7C384,192,480,224,576,245.3C672,267,768,277,864,256C960,235,1056,181,1152,160C1248,139,1344,149,1392,154.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-              ></path>
-            </svg>
-          </div>
-          <div className="container mx-auto px-6 md:px-10">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
-                Tarifs des Services
-                <span className="block w-24 h-1 bg-blue-700 mx-auto mt-4 rounded-full" />
-              </h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Services professionnels avec équipements de pointe et expertise
-                reconnue.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {/* Mounting Service */}
-              <Card className="p-6 shadow-xl rounded-2xl border border-gray-100 bg-white">
-                <CardHeader className="p-0 mb-6">
-                  <Wrench className="h-12 w-12 text-blue-700 mb-4" />
-                  <CardTitle className="text-2xl font-bold text-gray-800">
-                    Montage & Démontage
+                  <CardTitle className="text-3xl font-bold text-white mb-4">
+                    Pneus Neufs
                   </CardTitle>
-                  <CardDescription className="text-gray-600">
-                    Service professionnel avec équipement moderne
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="p-0">
-                  <div className="space-y-3 mb-6">
-                    <div className="flex justify-between">
-                      <span className="text-gray-700">Montage simple</span>
-                      <span className="font-semibold text-blue-700">
-                        15€/pneu
-                      </span>
+                  <div className="text-center">
+                    <span className="text-lg text-blue-100">À partir de</span>
+                    <div className="text-6xl font-bold text-yellow-400 my-2">
+                      70€
                     </div>
-                    <div className="flex justify-between">
-                      <span className="text-gray-700">
-                        Montage + équilibrage
-                      </span>
-                      <span className="font-semibold text-blue-700">
-                        25€/pneu
-                      </span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-gray-700">Démontage</span>
-                      <span className="font-semibold text-blue-700">
-                        10€/pneu
-                      </span>
-                    </div>
+                    <span className="text-blue-100">
+                      avec montage et équilibrage inclus
+                    </span>
                   </div>
-                  <div className="space-y-2">
-                    <div className="flex items-center gap-2 text-green-600 text-sm">
-                      <Check className="h-4 w-4" />
-                      <span>Contrôle de pression inclus</span>
+                </CardHeader>
+                <CardContent className="p-8 pt-0">
+                  <div className="space-y-3">
+                    <div className="flex items-center gap-3 text-white">
+                      <Shield className="w-5 h-5 text-yellow-400" />
+                      <span>Garantie constructeur</span>
                     </div>
-                    <div className="flex items-center gap-2 text-green-600 text-sm">
-                      <Check className="h-4 w-4" />
-                      <span>Vérification visuelle</span>
+                    <div className="flex items-center gap-3 text-white">
+                      <Star className="w-5 h-5 text-yellow-400" />
+                      <span>Grandes marques disponibles</span>
+                    </div>
+                    <div className="flex items-center gap-3 text-white">
+                      <Clock className="w-5 h-5 text-yellow-400" />
+                      <span>Installation rapide</span>
                     </div>
                   </div>
                 </CardContent>
               </Card>
+            </div>
 
-              {/* Balancing Service */}
-              <Card className="p-6 shadow-xl rounded-2xl border border-gray-100 bg-white">
-                <CardHeader className="p-0 mb-6">
-                  <Shield className="h-12 w-12 text-blue-700 mb-4" />
-                  <CardTitle className="text-2xl font-bold text-gray-800">
-                    Équilibrage
+            {/* Used Tires Card */}
+            <div className="group">
+              <Card className="relative overflow-hidden bg-gradient-to-br from-green-600 to-green-700 border-0 shadow-2xl transform transition-all duration-500 ">
+                <div className="absolute inset-0 bg-gradient-to-br from-green-500/20 to-transparent"></div>
+                <CardHeader className="relative z-10 text-center p-8">
+                  <div className="w-24 h-24 mx-auto mb-6 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm">
+                    <Image
+                      src="/pneus-en-occasion-icone.webp"
+                      width={48}
+                      height={48}
+                      alt="Pneus d'occasion"
+                      className="w-12 h-12"
+                    />
+                  </div>
+                  <CardTitle className="text-3xl font-bold text-white mb-4">
+                    Pneus d'Occasion
                   </CardTitle>
-                  <CardDescription className="text-gray-600">
-                    Équilibrage précis pour une conduite optimale
-                  </CardDescription>
+                  <div className="text-center">
+                    <span className="text-lg text-green-100">À partir de</span>
+                    <div className="text-6xl font-bold text-yellow-400 my-2">
+                      50€
+                    </div>
+                    <span className="text-green-100">
+                      avec montage et équilibrage inclus
+                    </span>
+                  </div>
                 </CardHeader>
-                <CardContent className="p-0">
-                  <div className="space-y-3 mb-6">
-                    <div className="flex justify-between">
-                      <span className="text-gray-700">Équilibrage simple</span>
-                      <span className="font-semibold text-blue-700">
-                        12€/roue
-                      </span>
+                <CardContent className="p-8 pt-0">
+                  <div className="space-y-3">
+                    <div className="flex items-center gap-3 text-white">
+                      <Shield className="w-5 h-5 text-yellow-400" />
+                      <span>Contrôlés et garantis</span>
                     </div>
-                    <div className="flex justify-between">
-                      <span className="text-gray-700">
-                        Équilibrage + contrôle
-                      </span>
-                      <span className="font-semibold text-blue-700">
-                        18€/roue
-                      </span>
+                    <div className="flex items-center gap-3 text-white">
+                      <Star className="w-5 h-5 text-yellow-400" />
+                      <span>Usure 50%</span>
                     </div>
-                    <div className="flex justify-between">
-                      <span className="text-gray-700">Rééquilibrage</span>
-                      <span className="font-semibold text-blue-700">
-                        8€/roue
-                      </span>
-                    </div>
-                  </div>
-                  <div className="space-y-2">
-                    <div className="flex items-center gap-2 text-green-600 text-sm">
-                      <Check className="h-4 w-4" />
-                      <span>Machine de précision</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-green-600 text-sm">
-                      <Check className="h-4 w-4" />
-                      <span>Contrôle final inclus</span>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-
-              {/* Inflation Service */}
-              <Card className="p-6 shadow-xl rounded-2xl border border-gray-100 bg-white">
-                <CardHeader className="p-0 mb-6">
-                  <Star className="h-12 w-12 text-blue-700 mb-4" />
-                  <CardTitle className="text-2xl font-bold text-gray-800">
-                    Gonflage & Contrôle
-                  </CardTitle>
-                  <CardDescription className="text-gray-600">
-                    Vérification et ajustement de pression
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="p-0">
-                  <div className="space-y-3 mb-6">
-                    <div className="flex justify-between">
-                      <span className="text-gray-700">Gonflage simple</span>
-                      <span className="font-semibold text-green-600">
-                        Gratuit
-                      </span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-gray-700">Contrôle complet</span>
-                      <span className="font-semibold text-blue-700">5€</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-gray-700">Gonflage azote</span>
-                      <span className="font-semibold text-blue-700">
-                        3€/pneu
-                      </span>
-                    </div>
-                  </div>
-                  <div className="space-y-2">
-                    <div className="flex items-center gap-2 text-green-600 text-sm">
-                      <Check className="h-4 w-4" />
-                      <span>Contrôle usure inclus</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-green-600 text-sm">
-                      <Check className="h-4 w-4" />
-                      <span>Conseils personnalisés</span>
+                    <div className="flex items-center gap-3 text-white">
+                      <Clock className="w-5 h-5 text-yellow-400" />
+                      <span>Excellent rapport qualité-prix</span>
                     </div>
                   </div>
                 </CardContent>
               </Card>
             </div>
           </div>
-          {/* Bottom wave */}
-          <div className="absolute bottom-0 left-0 w-full h-16 md:h-20 lg:h-24 text-blue-700">
-            <svg
-              viewBox="0 0 1440 320"
-              xmlns="http://www.w3.org/2000/svg"
-              className="w-full h-full"
-              preserveAspectRatio="none"
-            >
-              <path
-                fill="currentColor"
-                d="M0,160L48,176C96,192,192,224,288,208C384,192,480,128,576,128C672,128,768,192,864,213.3C960,235,1056,213,1152,186.7C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-              ></path>
-            </svg>
-          </div>
-        </section>
+        </div>
+        {/* Bottom wave */}
+        <div className="absolute bottom-0 left-0 w-full h-24 md:h-32 lg:h-48 text-white">
+          <svg
+            viewBox="0 0 1440 320"
+            xmlns="http://www.w3.org/2000/svg"
+            className="w-full h-full"
+            preserveAspectRatio="none"
+          >
+            <path
+              fill="currentColor"
+              d="M0,224L48,213.3C96,203,192,181,288,186.7C384,192,480,224,576,245.3C672,267,768,277,864,256C960,235,1056,181,1152,160C1248,139,1344,149,1392,154.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+            ></path>
+          </svg>
+        </div>
+      </section>
 
-        {/* Special Offers Section */}
-        <section className="w-full py-20 md:py-32 bg-gradient-to-r from-blue-700 to-blue-900 relative overflow-hidden">
-          {/* Top wave */}
-          <div className="absolute top-0 left-0 w-full h-16 md:h-20 lg:h-24 text-gray-100 transform rotate-180">
-            <svg
-              viewBox="0 0 1440 320"
-              xmlns="http://www.w3.org/2000/svg"
-              className="w-full h-full"
-              preserveAspectRatio="none"
-            >
-              <path
-                fill="currentColor"
-                d="M0,160L48,176C96,192,192,224,288,208C384,192,480,128,576,128C672,128,768,192,864,213.3C960,235,1056,213,1152,186.7C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-              ></path>
-            </svg>
-          </div>
-          <div className="container mx-auto px-6 md:px-10 relative z-10 text-white text-center">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 drop-shadow-md">
-              Offres Spéciales
-              <span className="block w-24 h-1 bg-yellow-500 mx-auto mt-4 rounded-full" />
+      {/* Detailed Pricing Grid */}
+      <section className="py-20 bg-white relative overflow-hidden">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+              Grille Tarifaire Détaillée
             </h2>
-            <p className="text-xl mb-12 max-w-3xl mx-auto opacity-95 leading-relaxed">
-              Profitez de nos promotions et forfaits avantageux pour économiser
-              sur vos pneumatiques.
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Prix pour 2 pneus montés et équilibrés - Service professionnel
+              inclus
             </p>
+          </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {/* Pack 4 Tires */}
-              <Card className="p-6 bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl">
-                <CardHeader className="p-0 mb-6">
-                  <Badge className="bg-yellow-500 text-gray-900 px-3 py-1 w-fit">
-                    -15%
-                  </Badge>
-                  <CardTitle className="text-2xl font-bold text-white mt-4">
-                    Pack 4 Pneus
-                  </CardTitle>
-                  <CardDescription className="text-gray-200">
-                    Achetez 4 pneus et économisez
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="p-0">
-                  <div className="space-y-3 text-white">
-                    <div className="flex items-center gap-2">
-                      <Check className="h-5 w-5 text-yellow-400" />
-                      <span>15% de réduction sur le 4ème pneu</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Check className="h-5 w-5 text-yellow-400" />
-                      <span>Montage et équilibrage offerts</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Check className="h-5 w-5 text-yellow-400" />
-                      <span>Contrôle gratuit pendant 1 an</span>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {pricingData.map((item, index) => {
+                const getCategoryColor = (category: string) => {
+                  switch (category) {
+                    case "standard":
+                      return "from-blue-500 to-blue-600";
+                    case "premium":
+                      return "from-purple-500 to-purple-600";
+                    case "sport":
+                      return "from-red-500 to-red-600";
+                    case "commercial":
+                      return "from-orange-500 to-orange-600";
+                    default:
+                      return "from-gray-500 to-gray-600";
+                  }
+                };
 
-              {/* Student Discount */}
-              <Card className="p-6 bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl">
-                <CardHeader className="p-0 mb-6">
-                  <Badge className="bg-green-500 text-white px-3 py-1 w-fit">
-                    -10%
-                  </Badge>
-                  <CardTitle className="text-2xl font-bold text-white mt-4">
-                    Tarif Étudiant
-                  </CardTitle>
-                  <CardDescription className="text-gray-200">
-                    Réduction pour les étudiants
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="p-0">
-                  <div className="space-y-3 text-white">
-                    <div className="flex items-center gap-2">
-                      <Check className="h-5 w-5 text-green-400" />
-                      <span>10% sur tous les pneus neufs</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Check className="h-5 w-5 text-green-400" />
-                      <span>Sur présentation carte étudiant</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Check className="h-5 w-5 text-green-400" />
-                      <span>Paiement en 3 fois sans frais</span>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+                const getCategoryBadge = (category: string) => {
+                  switch (category) {
+                    case "standard":
+                      return "Standard";
+                    case "premium":
+                      return "Premium";
+                    case "sport":
+                      return "Sport";
+                    case "commercial":
+                      return "Utilitaire";
+                    default:
+                      return "";
+                  }
+                };
 
-              {/* Loyalty Program */}
-              <Card className="p-6 bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl">
-                <CardHeader className="p-0 mb-6">
-                  <Badge className="bg-blue-500 text-white px-3 py-1 w-fit">
-                    Fidélité
-                  </Badge>
-                  <CardTitle className="text-2xl font-bold text-white mt-4">
-                    Programme Fidélité
-                  </CardTitle>
-                  <CardDescription className="text-gray-200">
-                    Cumulez des points à chaque achat
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="p-0">
-                  <div className="space-y-3 text-white">
-                    <div className="flex items-center gap-2">
-                      <Check className="h-5 w-5 text-blue-400" />
-                      <span>1€ dépensé = 1 point</span>
+                return (
+                  <Card
+                    key={index}
+                    className="group relative overflow-hidden border-0 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
+                  >
+                    <div
+                      className={`absolute inset-0 bg-gradient-to-br ${getCategoryColor(
+                        item.category
+                      )} opacity-90`}
+                    ></div>
+                    <div className="relative z-10 p-6 text-white text-center">
+                      {item.category !== "standard" && (
+                        <div className="inline-block bg-white/20 text-white text-xs px-3 py-1 rounded-full mb-3 font-medium">
+                          {getCategoryBadge(item.category)}
+                        </div>
+                      )}
+                      <CardTitle className="text-xl font-bold mb-3">
+                        {item.size}
+                      </CardTitle>
+                      <div className="text-4xl font-bold text-yellow-300 mb-2">
+                        {item.price}
+                      </div>
+                      <p className="text-sm opacity-90">pour 2 pneus</p>
                     </div>
-                    <div className="flex items-center gap-2">
-                      <Check className="h-5 w-5 text-blue-400" />
-                      <span>100 points = 10€ de réduction</span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <Check className="h-5 w-5 text-blue-400" />
-                      <span>Offres exclusives membres</span>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+                  </Card>
+                );
+              })}
             </div>
+          </div>
+        </div>
+        {/* Bottom wave */}
+        <div className="absolute bottom-0 left-0 w-full h-24 md:h-32 lg:h-48 text-gray-50">
+          <svg
+            viewBox="0 0 1440 320"
+            xmlns="http://www.w3.org/2000/svg"
+            className="w-full h-full"
+            preserveAspectRatio="none"
+          >
+            <path
+              fill="currentColor"
+              d="M0,96L48,112C96,128,192,160,288,186.7C384,213,480,235,576,213.3C672,192,768,128,864,128C960,128,1056,192,1152,208C1248,224,1344,192,1392,176L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+            ></path>
+          </svg>
+        </div>
+      </section>
 
-            <div className="mt-12">
+      {/* Features Section */}
+      <section className="py-20 bg-gray-50 relative overflow-hidden">
+        {/* Top wave */}
+        <div className="absolute top-0 left-0 w-full h-24 md:h-32 lg:h-48 text-gray-50 transform rotate-180">
+          <svg
+            viewBox="0 0 1440 320"
+            xmlns="http://www.w3.org/2000/svg"
+            className="w-full h-full"
+            preserveAspectRatio="none"
+          >
+            <path
+              fill="currentColor"
+              d="M0,96L48,112C96,128,192,160,288,186.7C384,213,480,235,576,213.3C672,192,768,128,864,128C960,128,1056,192,1152,208C1248,224,1344,192,1392,176L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+            ></path>
+          </svg>
+        </div>
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-800 mb-6">
+              Pourquoi Choisir Go Pneu 92 ?
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <Card className="text-center p-8 border-0 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Shield className="w-8 h-8 text-blue-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-800 mb-4">
+                Service Professionnel
+              </h3>
+              <p className="text-gray-600">
+                Montage et équilibrage inclus dans tous nos tarifs par des
+                experts certifiés
+              </p>
+            </Card>
+
+            <Card className="text-center p-8 border-0 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Star className="w-8 h-8 text-green-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-800 mb-4">
+                Garantie Qualité
+              </h3>
+              <p className="text-gray-600">
+                Tous nos services sont garantis et réalisés selon les standards
+                les plus élevés
+              </p>
+            </Card>
+
+            <Card className="text-center p-8 border-0 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Clock className="w-8 h-8 text-yellow-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-800 mb-4">
+                Prix Compétitifs
+              </h3>
+              <p className="text-gray-600">
+                Meilleur rapport qualité-prix du marché avec des tarifs
+                transparents
+              </p>
+            </Card>
+          </div>
+        </div>
+        {/* Bottom wave */}
+        <div className="absolute bottom-0 left-0 w-full h-24 md:h-32 lg:h-48 text-blue-600">
+          <svg
+            viewBox="0 0 1440 320"
+            xmlns="http://www.w3.org/2000/svg"
+            className="w-full h-full"
+            preserveAspectRatio="none"
+          >
+            <path
+              fill="currentColor"
+              d="M0,224L48,213.3C96,203,192,181,288,186.7C384,192,480,224,576,245.3C672,267,768,277,864,256C960,235,1056,181,1152,160C1248,139,1344,149,1392,154.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+            ></path>
+          </svg>
+        </div>
+      </section>
+
+      {/* Call to Action */}
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-800 relative overflow-hidden">
+        {/* Top wave */}
+        <div className="absolute top-0 left-0 w-full h-24 md:h-32 lg:h-48 text-blue-600 transform rotate-180">
+          <svg
+            viewBox="0 0 1440 320"
+            xmlns="http://www.w3.org/2000/svg"
+            className="w-full h-full"
+            preserveAspectRatio="none"
+          >
+            <path
+              fill="currentColor"
+              d="M0,224L48,213.3C96,203,192,181,288,186.7C384,192,480,224,576,245.3C672,267,768,277,864,256C960,235,1056,181,1152,160C1248,139,1344,149,1392,154.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+            ></path>
+          </svg>
+        </div>
+        <div className="absolute inset-0">
+          <Image
+            src="/illustration-voiture .webp"
+            alt="Car illustration"
+            width={1000}
+            height={500}
+            className="absolute right-0 bottom-0 h-full w-auto object-contain opacity-10"
+          />
+        </div>
+        <div className="container mx-auto px-6 relative z-10">
+          <div className="text-center max-w-4xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Prêt à Équiper Votre Véhicule ?
+            </h2>
+            <p className="text-xl text-blue-100 mb-10 leading-relaxed">
+              Contactez-nous dès maintenant pour un devis personnalisé et
+              profitez de notre expertise en pneumatiques
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
                 size="lg"
-                className="bg-yellow-500 hover:bg-yellow-600 text-gray-900 shadow-lg px-10 py-4 text-xl rounded-full"
+                className="bg-yellow-500 hover:bg-yellow-600 text-gray-900 shadow-lg px-8 py-4 text-lg rounded-full font-semibold"
               >
                 Demander un Devis <ChevronRight className="ml-2 h-5 w-5" />
               </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-white text-white hover:bg-white hover:text-blue-800 px-8 py-4 text-lg rounded-full font-semibold"
+              >
+                Nous Contacter
+              </Button>
             </div>
           </div>
-        </section>
-      </main>
-    </div>
+        </div>
+      </section>
+    </main>
   );
 }
