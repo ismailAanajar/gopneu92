@@ -53,7 +53,7 @@ export function HeroSlider({ slides, interval = 7000 }: HeroSliderProps) {
   };
 
   return (
-    <section className="relative w-full h-[650px] md:h-[750px] text-white overflow-hidden">
+    <section className="relative w-full h-[600px] md:h-[700px] text-white ">
       <AnimatePresence initial={false}>
         <motion.div
           key={currentSlide}
@@ -143,13 +143,13 @@ export function HeroSlider({ slides, interval = 7000 }: HeroSliderProps) {
       </Button>
 
       {/* Pagination Dots */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-30 flex space-x-2">
+      <div className="absolute bottom-14 left-1/2 -translate-x-1/2 z-[99] flex space-x-2">
         {slides.map((_, index) => (
           <button
             key={index}
             onClick={() => goToSlide(index)}
             className={cn(
-              "h-3 w-3 rounded-full bg-white transition-all duration-300",
+              "h-3 w-3 rounded-full cursor-pointer bg-white transition-all duration-300",
               currentSlide === index
                 ? "w-8 bg-[rgba(2,31,154,1)]"
                 : "opacity-50"
@@ -157,6 +157,19 @@ export function HeroSlider({ slides, interval = 7000 }: HeroSliderProps) {
             aria-label={`Go to slide ${index + 1}`}
           />
         ))}
+      </div>
+      <div className="absolute -bottom-0 z-50 left-0 w-full h-24 md:h-32 lg:h-48 text-white">
+        <svg
+          viewBox="0 0 1440 320"
+          xmlns="http://www.w3.org/2000/svg"
+          className="w-full h-full"
+          preserveAspectRatio="none"
+        >
+          <path
+            fill="currentColor"
+            d="M0,224L48,213.3C96,203,192,181,288,186.7C384,192,480,224,576,245.3C672,267,768,277,864,256C960,235,1056,181,1152,160C1248,139,1344,149,1392,154.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+          ></path>
+        </svg>
       </div>
     </section>
   );
