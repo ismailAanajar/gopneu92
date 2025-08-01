@@ -27,7 +27,7 @@ export default function RootLayout({
         {children}
         <Footer />
 
-        <Script type="text/javascript">
+        <Script id="chat" type="text/javascript">
           {`
    (function(d, t) {
       var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
