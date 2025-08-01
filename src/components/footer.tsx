@@ -81,9 +81,7 @@ const Footer = (props: Props) => {
       </div>
       <Separator className="my-12 bg-gray-800" />
       <div className="container mx-auto px-6 md:px-10 text-center text-gray-500 text-sm">
-        <p>
-          &copy; {new Date().getFullYear()} GO PNEU 92. Tous droits réservés.
-        </p>
+        <p>&copy; 2025 GO PNEU 92. Tous droits réservés.</p>
         <p className="mt-2">Créé par ismail</p>
       </div>
     </footer>
