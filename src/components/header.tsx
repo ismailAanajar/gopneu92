@@ -48,7 +48,7 @@ const Header = () => {
         scrolled ? "shadow-xl py-3 bg-white" : ""
       )}
     >
-      <div className="container flex items-center justify-between mx-auto">
+      <div className="container flex items-center justify-between mx-auto px-2">
         <Link
           href="/"
           className="text-3xl font-extrabold text-blue-800 tracking-tight"
@@ -158,7 +158,7 @@ const Header = () => {
               <Button
                 variant="ghost"
                 size="icon"
-                className="md:hidden bg-white"
+                className="md:hidden bg-white m-0"
               >
                 <Menu className="h-10 w-10 " />
                 <span className="sr-only">Toggle menu</span>
