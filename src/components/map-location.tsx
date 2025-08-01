@@ -24,14 +24,13 @@ interface MapLocationProps {
   phone: string;
 }
 
-export function MapLocation({
+export default function MapLocation({
   latitude,
   longitude,
   address,
   phone,
 }: MapLocationProps) {
   const position: [number, number] = [latitude, longitude];
-
   // Adjust the map center slightly downwards to account for the permanent tooltip
   // A small negative value for latitude shifts the map view south (down)
   const mapCenterOffsetLat = -0.0005; // This value might need fine-tuning based on visual appearance

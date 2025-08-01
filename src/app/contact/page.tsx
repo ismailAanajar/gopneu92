@@ -13,7 +13,11 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { MapLocation } from "@/components/map-location"; // Import the MapLocation component
+import dynamic from "next/dynamic";
+// import { MapLocation } from "@/components/map-location"; // Import the MapLocation component
+const MapLocation = dynamic(() => import("@/components/map-location"), {
+  ssr: false,
+});
 
 export default function ContactPage() {
   const mapLatitude = 48.7965; // Approximate latitude for 8 Rue Saint-Exupéry, Meudon
@@ -198,7 +202,7 @@ export default function ContactPage() {
         </section>
 
         {/* Legal Information Section */}
-        <section className="w-full py-12 bg-gray-100 text-gray-700 text-sm">
+        {/* <section className="w-full py-12 bg-gray-100 text-gray-700 text-sm">
           <div className="container mx-auto px-6 md:px-10 text-center max-w-4xl">
             <h3 className="text-xl font-bold mb-4 text-gray-800">
               Informations Légales & RGPD
@@ -226,7 +230,7 @@ export default function ContactPage() {
               contact@etre-visible.local.fr
             </p>
           </div>
-        </section>
+        </section> */}
       </main>
     </div>
   );
