@@ -330,7 +330,7 @@ export default function ServicesPage() {
         </section>
 
         {/* Pricing Section - Enhanced Professional and Modern Design */}
-        <section className="w-full py-20 md:py-32 bg-gradient-to-br from-blue-800 to-blue-950 relative overflow-hidden">
+        <section className="w-full py-20 md:py-52 bg-gradient-to-br from-blue-800 to-blue-950 relative overflow-hidden">
           {/* Top wave */}
           <div className="absolute top-0 left-0 w-full h-24 md:h-32 lg:h-48 text-gray-100 transform rotate-180">
             <svg
@@ -461,7 +461,7 @@ export default function ServicesPage() {
         </section>
 
         {/* Final Call to Action Banner */}
-        <section className="w-full py-20 md:py-32  bg-blue-700 relative overflow-hidden">
+        <section className="w-full py-20 md:py-32   bg-blue-700 relative overflow-hidden">
           <div className="absolute inset-0 z-0">
             <Image
               src="/illustration-voiture .webp"
