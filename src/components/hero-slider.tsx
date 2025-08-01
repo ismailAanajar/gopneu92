@@ -53,7 +53,7 @@ export function HeroSlider({ slides, interval = 7000 }: HeroSliderProps) {
   };
 
   return (
-    <section className="relative w-full h-[600px] md:h-[700px] text-white ">
+    <section className="relative w-full h-[600px] md:h-[700px] text-white overflow-x-hidden ">
       <AnimatePresence initial={false}>
         <motion.div
           key={currentSlide}
