@@ -44,7 +44,7 @@ const Header = () => {
   return (
     <header
       className={cn(
-        "w-full py-4   fixed top-0 left-0 right-0 z-[999]  transition-all duration-300 ",
+        "w-full py-4   fixed top-0 left-0 right-0 z-30   transition-all duration-300 ",
         scrolled ? "shadow-xl py-3 bg-white" : ""
       )}
     >
@@ -61,7 +61,7 @@ const Header = () => {
             className=""
           />
         </Link>
-        <nav className="ml-auto hidden md:flex space-x-8">
+        <nav className="ml-auto  relative hidden md:flex space-x-8">
           <Link
             href="/"
             className={cn(
@@ -158,7 +158,7 @@ const Header = () => {
               <Button
                 variant="ghost"
                 size="icon"
-                className="md:hidden bg-white m-0"
+                className="md:hidden bg-white m-0 z-[9999]"
               >
                 <Menu className="h-10 w-10 " />
                 <span className="sr-only">Toggle menu</span>
@@ -166,7 +166,7 @@ const Header = () => {
             </SheetTrigger>
             <SheetContent
               side="right"
-              className="w-[300px] sm:w-[400px] bg-white p-6 flex flex-col"
+              className="w-[300px] sm:w-[400px] z-[9999] bg-white p-6 flex flex-col"
             >
               <div className="flex justify-between items-center mb-8">
                 <Link
