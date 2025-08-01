@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Roboto, Roboto_Serif } from "next/font/google";
+import { Quicksand, Roboto, Roboto_Serif } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
@@ -7,6 +7,11 @@ import Script from "next/script";
 
 const geistMono = Roboto({
   variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
+const quick = Quicksand({
+  variable: "--font-quick",
   subsets: ["latin"],
 });
 
@@ -22,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={` ${geistMono.variable} antialiased`}>
+      <body className={`${quick.variable} ${geistMono.variable} antialiased`}>
         <Header />
         {children}
         <Footer />

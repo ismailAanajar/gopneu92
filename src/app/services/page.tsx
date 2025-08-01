@@ -218,7 +218,7 @@ export default function ServicesPage() {
         </section>
 
         {/* Pricing Section - Enhanced Professional and Modern Design */}
-        <section className="w-full py-20 md:py-32 bg-gradient-to-br from-blue-700 to-blue-900 text-white relative overflow-hidden">
+        <section className="w-full py-20 md:py-32  relative overflow-hidden">
           <div className="absolute inset-0 bg-[url('/images/trace-de-pneu.webp')] opacity-10 z-0" />
           <div className="container mx-auto px-6 md:px-10 relative z-10 text-center">
             <h2 className="text-4xl md:text-5xl font-bold mb-16 drop-shadow-md">
@@ -229,46 +229,46 @@ export default function ServicesPage() {
             {/* Top two pricing summary blocks */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12 max-w-5xl mx-auto">
               {/* Pneus neufs summary */}
-              <Card className="bg-white/15 backdrop-blur-sm rounded-2xl shadow-2xl border border-white/30 overflow-hidden flex flex-col items-center p-8 transition-all duration-300 hover:scale-[1.02] hover:shadow-3xl">
+              <Card className="bg-white/15 backdrop-blur-sm rounded-2xl  border border-white/30 overflow-hidden flex flex-col items-center p-8  ">
                 <CardHeader className="p-0 flex flex-col items-center w-full mb-4">
                   <Car className="h-28 w-28 text-yellow-400 mb-4 drop-shadow-lg" />
-                  <CardTitle className="text-4xl font-bold text-white mb-2">
+                  <CardTitle className="text-4xl font-bold  mb-2">
                     Pneus neufs
                   </CardTitle>
-                  <CardDescription className="text-2xl text-gray-200">
+                  <CardDescription className="text-2xl text-gray-600">
                     À partir de{" "}
                     <span className="text-yellow-400 font-extrabold text-5xl">
                       70 €
                     </span>
                   </CardDescription>
                 </CardHeader>
-                <CardContent className="p-0 text-xl text-gray-300">
+                <CardContent className="p-0 text-xl text-gray-600">
                   avec montage et équilibrage
                 </CardContent>
               </Card>
 
               {/* Pneus d'occasion summary */}
-              <Card className="bg-white/15 backdrop-blur-sm rounded-2xl shadow-2xl border border-white/30 overflow-hidden flex flex-col items-center p-8 transition-all duration-300 hover:scale-[1.02] hover:shadow-3xl">
+              <Card className="bg-white/15 backdrop-blur-sm rounded-2xl  border border-white/30 overflow-hidden flex flex-col items-center p-8 ">
                 <CardHeader className="p-0 flex flex-col items-center w-full mb-4">
                   <WrenchIcon className="h-28 w-28 text-yellow-400 mb-4 drop-shadow-lg" />
-                  <CardTitle className="text-4xl font-bold text-white mb-2">
+                  <CardTitle className="text-4xl font-bold  mb-2">
                     Pneus d&apos;occasion
                   </CardTitle>
-                  <CardDescription className="text-2xl text-gray-200">
+                  <CardDescription className="text-2xl text-gray-600">
                     À partir de{" "}
                     <span className="text-yellow-400 font-extrabold text-5xl">
                       50 €
                     </span>
                   </CardDescription>
                 </CardHeader>
-                <CardContent className="p-0 text-xl text-gray-300">
+                <CardContent className="p-0 text-xl text-gray-600">
                   avec montage et équilibrage
                 </CardContent>
               </Card>
             </div>
 
             {/* Third section: Detailed pricing grid for all sizes */}
-            <div className="bg-white/15 backdrop-blur-sm rounded-2xl shadow-2xl border border-white/30 overflow-hidden p-8 max-w-6xl mx-auto">
+            <div className="bg-white/15 backdrop-blur-sm   border border-gray-300  rounded-2xl  overflow-hidden p-8 max-w-6xl mx-auto">
               <h3 className="text-3xl font-bold mb-8 text-center text-yellow-400 drop-shadow-md">
                 Prix pour 2 pneus montés et équilibrés
               </h3>
@@ -286,7 +286,7 @@ export default function ServicesPage() {
                 ].map((item, index) => (
                   <Card
                     key={index}
-                    className="bg-blue-950/40 text-white py-5 px-4 rounded-xl flex flex-col items-center justify-center text-lg font-semibold shadow-lg border border-white/20 transition-all duration-300 hover:bg-blue-950/60 hover:scale-[1.03] hover:shadow-xl"
+                    className="bg-blue-800 text-white py-5 px-4 rounded-xl flex flex-col items-center justify-center text-lg font-semibold shadow-lg border border-white/20 transition-all duration-300 hover:bg-blue-950/60 hover:scale-[1.03] hover:shadow-xl"
                   >
                     <CardTitle className="text-lg font-medium text-gray-200">
                       {item.size}
@@ -305,11 +305,11 @@ export default function ServicesPage() {
         <section className="w-full py-20 md:py-32 bg-gradient-to-r from-blue-700 to-blue-900 relative overflow-hidden">
           <div className="absolute inset-0 z-0">
             <Image
-              src="/images/illustration-voiture.webp"
+              src="/illustration-voiture .webp"
               alt="Car illustration"
               width={1000}
               height={500}
-              className="absolute right-0 bottom-0 h-full w-auto object-contain opacity-30 md:opacity-50"
+              className="absolute right-0 bottom-0 h-full w-auto object-contain opacity-5"
             />
           </div>
           <div className="container mx-auto px-6 md:px-10 relative z-10 text-white text-center md:text-left">
