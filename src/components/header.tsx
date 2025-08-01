@@ -44,7 +44,7 @@ const Header = () => {
   return (
     <header
       className={cn(
-        "w-full py-4 px-6 md:px-10 flex items-center justify-between  fixed top-0 left-0 right-0 z-50 transition-all duration-300 ",
+        "w-full py-4 px-6 md:px-10 flex items-center justify-between  fixed top-0 left-0 right-0 z-50  transition-all duration-300 ",
         scrolled ? "shadow-xl py-3 bg-white" : ""
       )}
     >
@@ -60,7 +60,7 @@ const Header = () => {
           className=""
         />
       </Link>
-      <nav className="hidden md:flex space-x-8">
+      <nav className="ml-auto hidden md:flex space-x-8">
         <Link
           href="/"
           className={cn(
