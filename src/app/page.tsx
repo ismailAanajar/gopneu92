@@ -112,7 +112,10 @@ export default function HomePage() {
       <HeroSlider slides={heroSlides} />
 
       {/* Services Section */}
-      <section id="services" className="w-full py-20 md:py-32 bg-white">
+      <section
+        id="services"
+        className="w-full py-20 md:py-32 bg-white relative overflow-hidden"
+      >
         <div className="container mx-auto px-6 md:px-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 ">
             <div className="max-w-lg">
@@ -182,7 +185,21 @@ export default function HomePage() {
         </div>
       </section>
       {/* Why Choose Us Section */}
-      <section className="w-full py-20 md:py-32 bg-gray-100">
+      <section className="w-full py-20 md:py-32 bg-gray-100 relative overflow-hidden">
+        {/* Top wave */}
+        <div className="absolute top-0 left-0 w-full h-16 md:h-20 lg:h-24 text-white transform rotate-180">
+          <svg
+            viewBox="0 0 1440 320"
+            xmlns="http://www.w3.org/2000/svg"
+            className="w-full h-full"
+            preserveAspectRatio="none"
+          >
+            <path
+              fill="currentColor"
+              d="M0,224L48,213.3C96,203,192,181,288,186.7C384,192,480,224,576,245.3C672,267,768,277,864,256C960,235,1056,181,1152,160C1248,139,1344,149,1392,154.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+            ></path>
+          </svg>
+        </div>
         <div className="container mx-auto px-6 md:px-10 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-16">
             Pourquoi choisir Go Pneu 92 ?
@@ -221,9 +238,24 @@ export default function HomePage() {
             </div>
           </div>
         </div>
+        {/* Bottom wave */}
       </section>
       {/* About Us Section */}
       <section className="w-full py-20 md:py-32 bg-white relative overflow-hidden">
+        {/* Top wave */}
+        <div className="absolute top-0 left-0 w-full h-16 md:h-20 lg:h-24 text-gray-100 transform rotate-180">
+          <svg
+            viewBox="0 0 1440 320"
+            xmlns="http://www.w3.org/2000/svg"
+            className="w-full h-full"
+            preserveAspectRatio="none"
+          >
+            <path
+              fill="currentColor"
+              d="M0,160L48,176C96,192,192,224,288,208C384,192,480,128,576,128C672,128,768,192,864,213.3C960,235,1056,213,1152,186.7C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+            ></path>
+          </svg>
+        </div>
         <div className="container mx-auto px-6 md:px-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="lg:order-2 relative p-4">
             <Image
@@ -259,12 +291,26 @@ export default function HomePage() {
             </Button>
           </div>
         </div>
+        {/* Bottom wave */}
+        <div className="absolute bottom-0 left-0 w-full h-16 md:h-20 lg:h-24 text-blue-500">
+          <svg
+            viewBox="0 0 1440 320"
+            xmlns="http://www.w3.org/2000/svg"
+            className="w-full h-full"
+            preserveAspectRatio="none"
+          >
+            <path
+              fill="currentColor"
+              d="M0,224L48,213.3C96,203,192,181,288,186.7C384,192,480,224,576,245.3C672,267,768,277,864,256C960,235,1056,181,1152,160C1248,139,1344,149,1392,154.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+            ></path>
+          </svg>
+        </div>
       </section>
 
       {/* Hours & Appointment Section - New Redesign */}
       <section
         id="appointment"
-        className="w-full py-20 md:py-32 relative overflow-hidden"
+        className="w-full py-20 md:py-32 relative overflow-hidden bg-blue-500"
       >
         {/* <Image
           src="/horaire.webp"
@@ -273,14 +319,14 @@ export default function HomePage() {
           objectFit="cover"
           className="absolute inset-0 z-0 opacity-15"
         /> */}
-        <div className="absolute inset-0 bg-blue-950/80 z-0" />{" "}
+        {/* <div className="absolute inset-0 bg-blue-950/80 z-0" />{" "} */}
         {/* Darker, more immersive overlay */}
         <div className="container mx-auto px-6 md:px-10 relative z-10 text-white text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-16 drop-shadow-md">
             Facilitez votre visite
             <span className="block w-24 h-1 bg-yellow-500 mx-auto mt-4 rounded-full" />
           </h2>
-          <div className="max-w-4xl mx-auto bg-white/10 backdrop-blur-sm rounded-2xl shadow-2xl p-8 md:p-12 border border-white/20">
+          <div className="max-w-4xl mx-auto bg-white text-black backdrop-blur-sm rounded-2xl shadow-2xl p-8 md:p-12 border border-white/20">
             <div className="flex flex-col md:flex-row items-center justify-center md:justify-start gap-6 mb-8">
               <Clock className="h-16 w-16 text-yellow-400 flex-shrink-0" />
               <div className="text-center md:text-left">
@@ -298,7 +344,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            <Separator className="my-10 bg-white/30" />
+            <Separator className="my-10 bg-gray-300" />
 
             <div className="flex flex-col md:flex-row items-center justify-center md:justify-start gap-6 mb-8">
               <CalendarCheck className="h-16 w-16 text-yellow-400 flex-shrink-0" />
@@ -331,7 +377,21 @@ export default function HomePage() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="w-full py-20 md:py-32 bg-gray-50">
+      <section className="w-full py-20 md:py-32 bg-gray-50 relative overflow-hidden">
+        {/* Top wave */}
+        <div className="absolute top-0 left-0 w-full h-16 md:h-20 lg:h-24 text-blue-500 transform rotate-180">
+          <svg
+            viewBox="0 0 1440 320"
+            xmlns="http://www.w3.org/2000/svg"
+            className="w-full h-full"
+            preserveAspectRatio="none"
+          >
+            <path
+              fill="currentColor"
+              d="M0,160L48,176C96,192,192,224,288,208C384,192,480,128,576,128C672,128,768,192,864,213.3C960,235,1056,213,1152,186.7C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+            ></path>
+          </svg>
+        </div>
         <div className="container mx-auto px-6 md:px-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-800">
@@ -372,7 +432,21 @@ export default function HomePage() {
       </section>
 
       {/* Contact Banner */}
-      <section className="w-full py-20 md:py-32 bg-gradient-to-r from-blue-700 to-blue-900 relative overflow-hidden">
+      <section className="w-full mb-24 py-28 md:py-32 bg-gradient-to-r from-blue-700 to-blue-900 relative overflow-hidden">
+        {/* Top wave */}
+        <div className="absolute top-0 left-0 w-full h-16 md:h-20 lg:h-24 text-gray-50 transform rotate-180">
+          <svg
+            viewBox="0 0 1440 320"
+            xmlns="http://www.w3.org/2000/svg"
+            className="w-full h-full"
+            preserveAspectRatio="none"
+          >
+            <path
+              fill="currentColor"
+              d="M0,96L48,112C96,128,192,160,288,186.7C384,213,480,235,576,213.3C672,192,768,128,864,128C960,128,1056,192,1152,208C1248,224,1344,192,1392,176L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+            ></path>
+          </svg>
+        </div>
         {/* <div className="absolute inset-0 z-0">
           <Image
             src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Pneus-neufs-et-d%E2%80%99occasion-%C3%A0-Meudon-Optimisez-vos-roues-UkU5WoaJWjfKJeHQMvW2nbX4SLqnVb.png"
@@ -399,6 +473,20 @@ export default function HomePage() {
           >
             Roulez en sécurité <ChevronRight className="ml-2 h-5 w-5" />
           </Button>
+        </div>
+        {/* Bottom wave */}
+        <div className="absolute bottom-0 left-0 w-full h-16 md:h-20 lg:h-24 text-white">
+          <svg
+            viewBox="0 0 1440 320"
+            xmlns="http://www.w3.org/2000/svg"
+            className="w-full h-full"
+            preserveAspectRatio="none"
+          >
+            <path
+              fill="currentColor"
+              d="M0,96L48,112C96,128,192,160,288,186.7C384,213,480,235,576,213.3C672,192,768,128,864,128C960,128,1056,192,1152,208C1248,224,1344,192,1392,176L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+            ></path>
+          </svg>
         </div>
       </section>
     </div>
