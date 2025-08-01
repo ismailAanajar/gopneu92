@@ -55,10 +55,38 @@ export default function ServicesPage() {
               Prendre rendez-vous <ChevronRight className="ml-2 h-5 w-5" />
             </Button>
           </div>
+          {/* Wave separator */}
+          <div className="absolute bottom-0 left-0 w-full h-24 md:h-32 lg:h-48 text-white">
+            <svg
+              viewBox="0 0 1440 320"
+              xmlns="http://www.w3.org/2000/svg"
+              className="w-full h-full"
+              preserveAspectRatio="none"
+            >
+              <path
+                fill="currentColor"
+                d="M0,224L48,213.3C96,203,192,181,288,186.7C384,192,480,224,576,245.3C672,267,768,277,864,256C960,235,1056,181,1152,160C1248,139,1344,149,1392,154.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+              ></path>
+            </svg>
+          </div>
         </section>
 
         {/* Why Choose Us for Services Section - New Section */}
         <section className="w-full py-20 md:py-32 bg-white relative overflow-hidden">
+          {/* Top wave */}
+          <div className="absolute top-0 left-0 w-full h-24 md:h-32 lg:h-48 text-white transform rotate-180">
+            <svg
+              viewBox="0 0 1440 320"
+              xmlns="http://www.w3.org/2000/svg"
+              className="w-full h-full"
+              preserveAspectRatio="none"
+            >
+              <path
+                fill="currentColor"
+                d="M0,224L48,213.3C96,203,192,181,288,186.7C384,192,480,224,576,245.3C672,267,768,277,864,256C960,235,1056,181,1152,160C1248,139,1344,149,1392,154.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+              ></path>
+            </svg>
+          </div>
           <div className="absolute inset-0 bg-[url('/images/trace-de-pneu.webp')] opacity-5 z-0" />
           <div className="container mx-auto px-6 md:px-10 text-center relative z-10">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-16">
@@ -98,6 +126,34 @@ export default function ServicesPage() {
               </div>
             </div>
           </div>
+          {/* Wave separator */}
+          <div className="absolute bottom-0 left-0 w-full h-24 md:h-32 lg:h-48 text-white">
+            <svg
+              viewBox="0 0 1440 320"
+              xmlns="http://www.w3.org/2000/svg"
+              className="w-full h-full"
+              preserveAspectRatio="none"
+            >
+              <path
+                fill="currentColor"
+                d="M0,224L48,213.3C96,203,192,181,288,186.7C384,192,480,224,576,245.3C672,267,768,277,864,256C960,235,1056,181,1152,160C1248,139,1344,149,1392,154.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+              ></path>
+            </svg>
+          </div>
+          {/* Bottom wave */}
+          <div className="absolute bottom-0 left-0 w-full h-24 md:h-32 lg:h-48 text-white">
+            <svg
+              viewBox="0 0 1440 320"
+              xmlns="http://www.w3.org/2000/svg"
+              className="w-full h-full"
+              preserveAspectRatio="none"
+            >
+              <path
+                fill="currentColor"
+                d="M0,96L48,112C96,128,192,160,288,186.7C384,213,480,235,576,213.3C672,192,768,128,864,128C960,128,1056,192,1152,208C1248,224,1344,192,1392,176L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+              ></path>
+            </svg>
+          </div>
         </section>
 
         {/* Service Deep Dive: Vente de pneus neufs et d'occasion */}
@@ -105,6 +161,20 @@ export default function ServicesPage() {
           id="Vente de pneus"
           className="w-full py-20 md:py-32 bg-gray-100 relative overflow-hidden"
         >
+          {/* Top wave */}
+          <div className="absolute top-0 left-0 w-full h-24 md:h-32 lg:h-48 text-white transform rotate-180">
+            <svg
+              viewBox="0 0 1440 320"
+              xmlns="http://www.w3.org/2000/svg"
+              className="w-full h-full"
+              preserveAspectRatio="none"
+            >
+              <path
+                fill="currentColor"
+                d="M0,96L48,112C96,128,192,160,288,186.7C384,213,480,235,576,213.3C672,192,768,128,864,128C960,128,1056,192,1152,208C1248,224,1344,192,1392,176L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+              ></path>
+            </svg>
+          </div>
           <div className="container mx-auto px-6 md:px-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="relative p-4">
               <Image
@@ -137,6 +207,20 @@ export default function ServicesPage() {
                 <ChevronRight className="ml-2 h-4 w-4" />
               </Button>
             </div>
+          </div>
+          {/* Wave separator */}
+          <div className="absolute bottom-0 left-0 w-full h-24 md:h-32 lg:h-48 text-white">
+            <svg
+              viewBox="0 0 1440 320"
+              xmlns="http://www.w3.org/2000/svg"
+              className="w-full h-full"
+              preserveAspectRatio="none"
+            >
+              <path
+                fill="currentColor"
+                d="M0,224L48,213.3C96,203,192,181,288,186.7C384,192,480,224,576,245.3C672,267,768,277,864,256C960,235,1056,181,1152,160C1248,139,1344,149,1392,154.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+              ></path>
+            </svg>
           </div>
         </section>
 
@@ -177,6 +261,20 @@ export default function ServicesPage() {
               </Button>
             </div>
           </div>
+          {/* Wave separator */}
+          <div className="absolute bottom-0 left-0 w-full h-24 md:h-32 lg:h-48 text-gray-100">
+            <svg
+              viewBox="0 0 1440 320"
+              xmlns="http://www.w3.org/2000/svg"
+              className="w-full h-full"
+              preserveAspectRatio="none"
+            >
+              <path
+                fill="currentColor"
+                d="M0,224L48,213.3C96,203,192,181,288,186.7C384,192,480,224,576,245.3C672,267,768,277,864,256C960,235,1056,181,1152,160C1248,139,1344,149,1392,154.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+              ></path>
+            </svg>
+          </div>
         </section>
 
         {/* Service Deep Dive: Gonflage et équilibrage (Alternating layout) */}
@@ -215,13 +313,41 @@ export default function ServicesPage() {
               </Button>
             </div>
           </div>
+          {/* Wave separator */}
+          <div className="absolute bottom-0 left-0 w-full h-24 md:h-32 lg:h-48 text-gray-100">
+            <svg
+              viewBox="0 0 1440 320"
+              xmlns="http://www.w3.org/2000/svg"
+              className="w-full h-full"
+              preserveAspectRatio="none"
+            >
+              <path
+                fill="currentColor"
+                d="M0,224L48,213.3C96,203,192,181,288,186.7C384,192,480,224,576,245.3C672,267,768,277,864,256C960,235,1056,181,1152,160C1248,139,1344,149,1392,154.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+              ></path>
+            </svg>
+          </div>
         </section>
 
         {/* Pricing Section - Enhanced Professional and Modern Design */}
-        <section className="w-full py-20 md:py-32  relative overflow-hidden">
+        <section className="w-full py-20 md:py-32 bg-gradient-to-br from-blue-800 to-blue-950 relative overflow-hidden">
+          {/* Top wave */}
+          <div className="absolute top-0 left-0 w-full h-24 md:h-32 lg:h-48 text-gray-100 transform rotate-180">
+            <svg
+              viewBox="0 0 1440 320"
+              xmlns="http://www.w3.org/2000/svg"
+              className="w-full h-full"
+              preserveAspectRatio="none"
+            >
+              <path
+                fill="currentColor"
+                d="M0,160L48,176C96,192,192,224,288,208C384,192,480,128,576,128C672,128,768,192,864,213.3C960,235,1056,213,1152,186.7C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+              ></path>
+            </svg>
+          </div>
           <div className="absolute inset-0 bg-[url('/images/trace-de-pneu.webp')] opacity-10 z-0" />
           <div className="container mx-auto px-6 md:px-10 relative z-10 text-center">
-            <h2 className="text-4xl md:text-5xl font-bold mb-16 drop-shadow-md">
+            <h2 className="text-4xl md:text-5xl font-bold mb-16 drop-shadow-md text-white">
               Nos tarifs
               <span className="block w-24 h-1 bg-yellow-500 mx-auto mt-4 rounded-full" />
             </h2>
@@ -229,7 +355,7 @@ export default function ServicesPage() {
             {/* Top two pricing summary blocks */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12 mx-auto">
               {/* Pneus neufs summary */}
-              <Card className="bg-white/15 backdrop-blur-sm rounded-2xl  border border-white/30 overflow-hidden flex flex-col items-center p-8  ">
+              <Card className=" backdrop-blur-sm rounded-2xl  border border-white/30 overflow-hidden flex flex-col items-center p-8  ">
                 <CardHeader className="p-0 flex flex-col items-center w-full mb-4">
                   <Image
                     src={"/pneus-neufs-icone.webp"}
@@ -254,7 +380,7 @@ export default function ServicesPage() {
               </Card>
 
               {/* Pneus d'occasion summary */}
-              <Card className="bg-white/15 backdrop-blur-sm rounded-2xl  border border-white/30 overflow-hidden flex flex-col items-center p-8 ">
+              <Card className=" backdrop-blur-sm rounded-2xl  border border-white/30 overflow-hidden flex flex-col items-center p-8 ">
                 <CardHeader className="p-0 flex flex-col items-center w-full mb-4">
                   <Image
                     src={"/pneus-en-occasion-icone.webp"}
@@ -280,7 +406,7 @@ export default function ServicesPage() {
             </div>
 
             {/* Third section: Detailed pricing grid for all sizes */}
-            <div className="bg-white/15 backdrop-blur-sm   border border-gray-300  rounded-2xl  overflow-hidden p-8    mx-auto">
+            <div className="bg-white backdrop-blur-sm   border border-gray-300  rounded-2xl  overflow-hidden p-8    mx-auto">
               <Image
                 src={"/pneus-montés.webp"}
                 width={98}
@@ -318,10 +444,24 @@ export default function ServicesPage() {
               </div>
             </div>
           </div>
+          {/* Wave separator */}
+          <div className="absolute bottom-0 left-0 w-full h-24 md:h-32 lg:h-48 text-blue-700">
+            <svg
+              viewBox="0 0 1440 320"
+              xmlns="http://www.w3.org/2000/svg"
+              className="w-full h-full"
+              preserveAspectRatio="none"
+            >
+              <path
+                fill="currentColor"
+                d="M0,224L48,213.3C96,203,192,181,288,186.7C384,192,480,224,576,245.3C672,267,768,277,864,256C960,235,1056,181,1152,160C1248,139,1344,149,1392,154.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+              ></path>
+            </svg>
+          </div>
         </section>
 
         {/* Final Call to Action Banner */}
-        <section className="w-full py-20 md:py-32 bg-gradient-to-r from-blue-700 to-blue-900 relative overflow-hidden">
+        <section className="w-full py-20 md:py-32  bg-blue-700 relative overflow-hidden">
           <div className="absolute inset-0 z-0">
             <Image
               src="/illustration-voiture .webp"
@@ -349,6 +489,20 @@ export default function ServicesPage() {
             >
               Assurez votre sécurité <ChevronRight className="ml-2 h-5 w-5" />
             </Button>
+          </div>
+          {/* Wave separator */}
+          <div className="absolute bottom-0 left-0 w-full h-24 md:h-32 lg:h-48 text-white">
+            <svg
+              viewBox="0 0 1440 320"
+              xmlns="http://www.w3.org/2000/svg"
+              className="w-full h-full"
+              preserveAspectRatio="none"
+            >
+              <path
+                fill="currentColor"
+                d="M0,224L48,213.3C96,203,192,181,288,186.7C384,192,480,224,576,245.3C672,267,768,277,864,256C960,235,1056,181,1152,160C1248,139,1344,149,1392,154.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+              ></path>
+            </svg>
           </div>
         </section>
       </main>
