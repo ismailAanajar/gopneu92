@@ -231,7 +231,13 @@ export default function ServicesPage() {
               {/* Pneus neufs summary */}
               <Card className="bg-white/15 backdrop-blur-sm rounded-2xl  border border-white/30 overflow-hidden flex flex-col items-center p-8  ">
                 <CardHeader className="p-0 flex flex-col items-center w-full mb-4">
-                  <Car className="h-28 w-28 text-yellow-400 mb-4 drop-shadow-lg" />
+                  <Image
+                    src={"/pneus-neufs-icone.webp"}
+                    width={98}
+                    height={98}
+                    alt="pneus-neufs-icone"
+                    className="h-28 w-28 text-yellow-400 mb-4 drop-shadow-lg"
+                  />
                   <CardTitle className="text-4xl font-bold  mb-2">
                     Pneus neufs
                   </CardTitle>
@@ -250,7 +256,13 @@ export default function ServicesPage() {
               {/* Pneus d'occasion summary */}
               <Card className="bg-white/15 backdrop-blur-sm rounded-2xl  border border-white/30 overflow-hidden flex flex-col items-center p-8 ">
                 <CardHeader className="p-0 flex flex-col items-center w-full mb-4">
-                  <WrenchIcon className="h-28 w-28 text-yellow-400 mb-4 drop-shadow-lg" />
+                  <Image
+                    src={"/pneus-en-occasion-icone.webp"}
+                    width={98}
+                    height={98}
+                    alt="pneus-neufs-icone"
+                    className="h-28 w-28 text-yellow-400 mb-4 drop-shadow-lg"
+                  />
                   <CardTitle className="text-4xl font-bold  mb-2">
                     Pneus d&apos;occasion
                   </CardTitle>
@@ -269,6 +281,13 @@ export default function ServicesPage() {
 
             {/* Third section: Detailed pricing grid for all sizes */}
             <div className="bg-white/15 backdrop-blur-sm   border border-gray-300  rounded-2xl  overflow-hidden p-8    mx-auto">
+              <Image
+                src={"/pneus-montés.webp"}
+                width={98}
+                height={98}
+                alt="pneus-neufs-icone"
+                className="h-28 mx-auto w-28 text-yellow-400 mb-4 drop-shadow-lg"
+              />
               <h3 className="text-3xl font-bold mb-8 text-center text-yellow-400 drop-shadow-md">
                 Prix pour 2 pneus montés et équilibrés
               </h3>
