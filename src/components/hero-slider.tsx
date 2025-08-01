@@ -70,7 +70,7 @@ export function HeroSlider({ slides, interval = 7000 }: HeroSliderProps) {
             objectFit="cover"
             className="z-0"
           />
-          <div className="absolute inset-0 bg-radial-[at_50%_50%] from-black/90 to-zinc-900/70 to-75% z-10" />
+          <div className="absolute inset-0  bg-gradient-to-r from-blue-800/40 to-blue-950 z-10" />
         </motion.div>
       </AnimatePresence>
 
