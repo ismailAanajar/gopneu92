@@ -73,7 +73,7 @@ const heroSlides = [
     imageUrl: "/home.jpg",
     title: "Service pneumatique à Meudon",
     description:
-      "Découvrez Go Pneu 92, votre partenaire local pour tous vos besoins en pneumatiques. Nous proposons divers services allant de la vente de pneus neufs ou d'occasion au montage, démontage, gonflage et équilibrage de vos roues. Notre objectif est de garantir une conduite sécurisée grâce à un équipement de qualité et des prestations réalisées par nos experts.",
+      "Go Pneu 92, votre expert local en pneus neufs et d’occasion. Montage, démontage, équilibrage et gonflage pour une conduite en toute sécurité.",
     buttonText: "Optimisez vos roues",
     buttonLink: "#services",
     icon: Wrench,
