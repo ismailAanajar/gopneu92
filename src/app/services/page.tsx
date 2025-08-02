@@ -9,6 +9,9 @@ import {
   CheckCircle,
   ShieldCheck,
   Users,
+  Star,
+  Shield,
+  Clock,
 } from "lucide-react"; // Added CheckCircle, ShieldCheck, Users
 
 import { Button } from "@/components/ui/button";
@@ -328,8 +331,8 @@ export default function ServicesPage() {
           </div>
         </section>
 
-        {/* Pricing Section - Enhanced Professional and Modern Design */}
-        <section className="w-full py-20 md:py-52 bg-gradient-to-br from-blue-800 to-blue-950 relative overflow-hidden">
+        {/* Pricing Section - Redesigned with New Structure and Concept */}
+        <section className="w-full py-24 md:py-44 bg-gray-50 relative">
           {/* Top wave */}
           <div className="absolute top-0 left-0 w-full h-24 md:h-32 lg:h-48 text-gray-100 transform rotate-180">
             <svg
@@ -344,102 +347,153 @@ export default function ServicesPage() {
               ></path>
             </svg>
           </div>
-          <div className="absolute inset-0 bg-[url('/images/trace-de-pneu.webp')] opacity-10 z-0" />
-          <div className="container mx-auto px-6 md:px-10 relative z-10 text-center">
-            <h2 className="text-4xl md:text-5xl font-bold mb-16 drop-shadow-md text-white">
-              Nos tarifs
-              <span className="block w-24 h-1 bg-yellow-500 mx-auto mt-4 rounded-full" />
-            </h2>
+          <div className="container mx-auto px-6 md:px-10">
+            {/* Header */}
+            <div className="text-center mb-16">
+              <div className="inline-flex items-center bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium mb-4">
+                <DollarSign className="w-4 h-4 mr-2" />
+                Tarifs transparents
+              </div>
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                Nos tarifs compétitifs
+              </h2>
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+                Des prix justes et transparents pour tous vos besoins en
+                pneumatiques
+              </p>
+            </div>
 
-            {/* Top two pricing summary blocks */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12 mx-auto">
-              {/* Pneus neufs summary */}
-              <Card className=" backdrop-blur-sm rounded-2xl  border border-white/30 overflow-hidden flex flex-col items-center p-8  ">
-                <CardHeader className="p-0 flex flex-col items-center w-full mb-4">
-                  <Image
-                    src={"/pneus-neufs-icone.webp"}
-                    width={98}
-                    height={98}
-                    alt="pneus-neufs-icone"
-                    className="h-28 w-28 text-yellow-400 mb-4 drop-shadow-lg"
-                  />
-                  <CardTitle className="text-4xl font-bold  mb-2">
-                    Pneus neufs
+            {/* Main Pricing Categories */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+              {/* New Tires Category */}
+              <div className="relative">
+                <Card className="h-full bg-white border-2 border-blue-200 ">
+                  <CardHeader className="text-center pb-4">
+                    <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <Image
+                        src="/pneus-neufs-icone.webp"
+                        width={48}
+                        height={48}
+                        alt="Pneus neufs"
+                        className="w-12 h-12"
+                      />
+                    </div>
+                    <CardTitle className="text-2xl font-bold text-gray-900">
+                      Pneus Neufs
+                    </CardTitle>
+                    <CardDescription className="text-gray-600">
+                      Garantie constructeur • Performances optimales
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent className="pt-0">
+                    <div className="text-center mb-6">
+                      <h2 className="text-4xl font-bold text-blue-600 mb-2">
+                        À partir de 70€
+                      </h2>
+                      <div className="text-sm text-gray-500">
+                        montage et équilibrage inclus
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+
+              {/* Used Tires Category */}
+              <Card className="h-full bg-white border-2 border-gray-200 ">
+                <CardHeader className="text-center pb-4">
+                  <div className="w-20 h-20 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Image
+                      src="/pneus-en-occasion-icone.webp"
+                      width={48}
+                      height={48}
+                      alt="Pneus d'occasion"
+                      className="w-12 h-12"
+                    />
+                  </div>
+                  <CardTitle className="text-2xl font-bold text-gray-900">
+                    Pneus d'Occasion
                   </CardTitle>
-                  <CardDescription className="text-2xl text-gray-600">
-                    À partir de{" "}
-                    <span className="text-yellow-400 font-extrabold text-5xl">
-                      70 €
-                    </span>
+                  <CardDescription className="text-gray-600">
+                    Contrôlés et sélectionnés • Excellent rapport qualité-prix
                   </CardDescription>
                 </CardHeader>
-                <CardContent className="p-0 text-xl text-gray-600">
-                  avec montage et équilibrage
-                </CardContent>
-              </Card>
-
-              {/* Pneus d'occasion summary */}
-              <Card className=" backdrop-blur-sm rounded-2xl  border border-white/30 overflow-hidden flex flex-col items-center p-8 ">
-                <CardHeader className="p-0 flex flex-col items-center w-full mb-4">
-                  <Image
-                    src={"/pneus-en-occasion-icone.webp"}
-                    width={98}
-                    height={98}
-                    alt="pneus-neufs-icone"
-                    className="h-28 w-28 text-yellow-400 mb-4 drop-shadow-lg"
-                  />
-                  <CardTitle className="text-4xl font-bold  mb-2">
-                    Pneus d&apos;occasion
-                  </CardTitle>
-                  <CardDescription className="text-2xl text-gray-600">
-                    À partir de{" "}
-                    <span className="text-yellow-400 font-extrabold text-5xl">
-                      50 €
-                    </span>
-                  </CardDescription>
-                </CardHeader>
-                <CardContent className="p-0 text-xl text-gray-600">
-                  avec montage et équilibrage
+                <CardContent className="pt-0">
+                  <div className="text-center mb-6">
+                    <h2 className="text-4xl font-bold text-orange-600 mb-2">
+                      À partir de 50€
+                    </h2>
+                    <div className="text-sm text-gray-500">
+                      montage et équilibrage inclus
+                    </div>
+                  </div>
                 </CardContent>
               </Card>
             </div>
 
-            {/* Third section: Detailed pricing grid for all sizes */}
-            <div className="bg-white backdrop-blur-sm   border border-gray-300  rounded-2xl  overflow-hidden p-8    mx-auto">
-              <Image
-                src={"/pneus-montés.webp"}
-                width={98}
-                height={98}
-                alt="pneus-neufs-icone"
-                className="h-28 mx-auto w-28 text-yellow-400 mb-4 drop-shadow-lg"
-              />
-              <h3 className="text-3xl font-bold mb-8 text-center text-yellow-400 drop-shadow-md">
-                Prix pour 2 pneus montés et équilibrés
-              </h3>
-              <div className="grid grid-cols-2 sm:grid-cols-3  gap-6">
-                {[
-                  { size: "13 pouces", price: "70 €" },
-                  { size: "14 pouces", price: "70 €" },
-                  { size: "15 pouces", price: "70 €" },
-                  { size: "16 pouces", price: "80 €" },
-                  { size: "17 pouces", price: "100 €" },
-                  { size: "18 pouces", price: "120 €" },
-                  { size: "19 pouces", price: "120 €" },
-                  { size: "20 pouces", price: "120 €" },
-                  { size: "Taille en C", price: "100 €" },
-                ].map((item, index) => (
-                  <Card
-                    key={index}
-                    className="bg-blue-800 text-white py-5 px-4 rounded-xl flex flex-col items-center justify-center text-lg font-semibold shadow-lg border border-white/20 transition-all duration-300 hover:bg-blue-950/60 hover:scale-[1.03] hover:shadow-xl"
-                  >
-                    <CardTitle className="text-lg font-medium text-gray-200">
-                      {item.size}
-                    </CardTitle>
-                    <CardContent className="p-0 text-3xl font-bold text-yellow-400 mt-1">
-                      {item.price}
-                    </CardContent>
-                  </Card>
-                ))}
+            {/* Detailed Pricing Table */}
+            <div className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden">
+              <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white p-6 text-center">
+                <div className="flex items-center justify-center mb-2">
+                  <Image
+                    src="/pneus-montés.webp"
+                    width={40}
+                    height={40}
+                    alt="Pneus montés"
+                    className="w-10 h-10 mr-3"
+                  />
+                  <h3 className="text-2xl font-bold">
+                    Grille tarifaire détaillée
+                  </h3>
+                </div>
+                <p className="text-blue-100">
+                  Prix pour 2 pneus montés et équilibrés
+                </p>
+              </div>
+
+              <div className="p-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                  {[
+                    { size: "13 pouces", price: "70 €", category: "standard" },
+                    { size: "14 pouces", price: "70 €", category: "standard" },
+                    { size: "15 pouces", price: "70 €", category: "standard" },
+                    { size: "16 pouces", price: "80 €", category: "premium" },
+                    { size: "17 pouces", price: "100 €", category: "premium" },
+                    { size: "18 pouces", price: "120 €", category: "sport" },
+                    { size: "19 pouces", price: "120 €", category: "sport" },
+                    { size: "20 pouces", price: "120 €", category: "sport" },
+                    {
+                      size: "Taille en C",
+                      price: "100 €",
+                      category: "commercial",
+                    },
+                  ].map((item, index) => {
+                    const categoryColors = {
+                      standard: "bg-green-50 border-green-200 text-green-800",
+                      premium: "bg-blue-50 border-blue-200 text-blue-800",
+                      sport: "bg-purple-50 border-purple-200 text-purple-800",
+                      commercial:
+                        "bg-orange-50 border-orange-200 text-orange-800",
+                    };
+
+                    return (
+                      <div
+                        key={index}
+                        className={`p-4 rounded-lg border-2 transition-all duration-300  ${
+                          categoryColors[
+                            item.category as keyof typeof categoryColors
+                          ]
+                        }`}
+                      >
+                        <div className="text-center">
+                          <div className="font-semibold text-lg mb-1">
+                            {item.size}
+                          </div>
+                          <div className="text-2xl font-bold">{item.price}</div>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
               </div>
             </div>
           </div>
