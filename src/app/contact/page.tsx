@@ -39,7 +39,6 @@ export default function ContactPage() {
           />
           <div className="absolute inset-0 bg-blue-950/60 z-0" />
           <div className="container mx-auto px-6 md:px-10 relative z-10 text-white text-center">
-            <Wrench className="h-20 w-20 mx-auto mb-6 text-yellow-400 drop-shadow-lg" />
             <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-6 drop-shadow-md">
               Contactez-nous
               <span className="block w-24 h-1 bg-yellow-500 mx-auto mt-4 rounded-full" />
