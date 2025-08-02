@@ -255,7 +255,7 @@ const Header = () => {
                     className=" md:inline-flex bg-blue-700 hover:bg-blue-800    shadow-md hover:shadow-lg transition-all duration-300"
                   >
                     <Link
-                      href={"https://calendly.com/omaranajar/new-meeting"}
+                      href={"https://calendly.com/gopneu92/30min"}
                       target="_blank"
                     >
                       Prendre Rendez-vous
@@ -272,10 +272,7 @@ const Header = () => {
             size={"icon"}
             className="hidden md:inline-flex bg-blue-700 hover:bg-blue-800 text-white   shadow-md hover:shadow-lg transition-all duration-300"
           >
-            <Link
-              href={"https://calendly.com/omaranajar/new-meeting"}
-              target="_blank"
-            >
+            <Link href={"https://calendly.com/gopneu92/30min"} target="_blank">
               <CalendarDaysIcon />
             </Link>
           </Button>

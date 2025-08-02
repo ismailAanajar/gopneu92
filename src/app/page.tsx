@@ -358,7 +358,7 @@ export default function HomePage() {
               className="mt-6 bg-yellow-500 hover:bg-yellow-600 text-gray-900 text-lg  shadow-md"
             >
               <Link
-                href={"https://calendly.com/omaranajar/new-meeting"}
+                href={"https://calendly.com/gopneu92/30min"}
                 target="_blank"
               >
                 Réserver en ligne <ChevronRight className="ml-2 h-4 w-4" />
