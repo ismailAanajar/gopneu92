@@ -336,7 +336,7 @@ export function HeroSlider({ slides, interval = 4000 }: HeroSliderProps) {
       </Carousel>
 
       {/* Pagination Dots */}
-      <div className="absolute bottom-14 left-1/2 -translate-x-1/2 z-[99] flex space-x-2">
+      <div className="absolute bottom-14 left-1/2 -translate-x-1/2 z-20 flex space-x-2">
         {slides.map((_, index) => (
           <button
             key={index}
@@ -351,7 +351,7 @@ export function HeroSlider({ slides, interval = 4000 }: HeroSliderProps) {
       </div>
 
       {/* Wave SVG */}
-      <div className="absolute -bottom-0 z-50 left-0 w-full h-24 md:h-32 lg:h-48 text-white">
+      <div className="absolute -bottom-0  left-0 w-full h-24 md:h-32 lg:h-48 text-white">
         <svg
           viewBox="0 0 1440 320"
           xmlns="http://www.w3.org/2000/svg"
