@@ -63,7 +63,7 @@ const testimonials = [
     quote:
       "1ere fois que j’y allais et je ne regrette pas, d’une rapidité à monter mes pneus. Ils sont très gentil",
     name: "Juliena Agnesa",
-    designation: "VP of Technology at FutureNet",
+    designation: "",
     src: "",
   },
 ];
@@ -344,7 +344,7 @@ export default function HomePage() {
                 <h3 className="text-3xl font-bold mb-2">
                   Prise de rendez-vous simplifiée
                 </h3>
-                <p className="text-xl leading-relaxed">
+                <p className=" leading-relaxed">
                   Nous facilitons votre accès à nos services grâce à un système
                   de prise de rendez-vous rapide et intuitif. Réservez en ligne
                   ou contactez-nous directement par téléphone pour planifier

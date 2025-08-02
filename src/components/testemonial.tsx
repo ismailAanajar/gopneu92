@@ -45,7 +45,7 @@ export const AnimatedTestimonials = ({
             Testimonial
           </h2>
           <h3 className="text-4xl md:text-4xl font-bold text-gray-900 mb-6">
-            23k+ Customers gave
+            76+ Customers gave
             <br />
             their <span className="text-blue-600">Feedback</span>
           </h3>
