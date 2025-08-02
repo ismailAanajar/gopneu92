@@ -29,83 +29,75 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { HeroSlider } from "@/components/hero-slider";
 import { useScroll } from "@/hooks/use-scroll"; // Import the useScroll hook
-import {
-  Sheet,
-  SheetContent,
-  SheetTrigger,
-  SheetClose,
-} from "@/components/ui/sheet"; // Import Sheet components
-import { TestimonialCarousel } from "@/components/testemonial";
-import { title } from "process";
+import { AnimatedTestimonials } from "@/components/testemonial";
+const testimonials = [
+  {
+    quote:
+      "Excellent professionnel, très bon rapport qualité prix et très rapide. Je recommande vivement.",
+    name: "Fabien Leborgne",
+    designation: "",
+    src: "",
+  },
+  {
+    quote:
+      "J’ai appelé aujourd’hui pour un changement de pneu, on m’a confirmé que c’était dispo, je suis allée directement et en moins de 20 minutes c’était fait ! Super accueil, équipe très gentille et professionnelle. Je recommande sans hésiter. Merci beaucoup !",
+    name: "Anissa Barache",
+    designation: "",
+    src: "",
+  },
+  {
+    quote:
+      "Très bon accueil.Pro et efficace pour un prix imbattable.Lieu incontournable sur Meudon pour changer ses pneus Merci",
+    name: "Olivier Declerck",
+    designation: "",
+    src: "",
+  },
+  {
+    quote:
+      "J’ai crevé mon pneu il me les a changer dans la demi-heure. Une équipe très pro très sympa et honnête je recommande !",
+    name: "Sonya Lebrache",
+    designation: "",
+    src: "",
+  },
+  {
+    quote:
+      "1ere fois que j’y allais et je ne regrette pas, d’une rapidité à monter mes pneus. Ils sont très gentil",
+    name: "Juliena Agnesa",
+    designation: "VP of Technology at FutureNet",
+    src: "",
+  },
+];
 
+const heroSlides = [
+  {
+    imageUrl: "/home.jpg",
+    title: "Service pneumatique à Meudon",
+    description:
+      "Découvrez Go Pneu 92, votre partenaire local pour tous vos besoins en pneumatiques. Nous proposons divers services allant de la vente de pneus neufs ou d'occasion au montage, démontage, gonflage et équilibrage de vos roues. Notre objectif est de garantir une conduite sécurisée grâce à un équipement de qualité et des prestations réalisées par nos experts.",
+    buttonText: "Optimisez vos roues",
+    buttonLink: "#services",
+    icon: Wrench,
+  },
+  {
+    imageUrl: "/Gonfler-pneus-entretien.jpeg",
+    title: "Pneus Neufs et Occasion",
+    description:
+      "Explorez notre vaste sélection de pneus neufs et d'occasion de toutes marques. Trouvez la solution parfaite pour votre véhicule et votre budget, avec des conseils d'experts pour vous guider.",
+    buttonText: "Voir nos pneus",
+    buttonLink: "#services",
+    icon: Car,
+  },
+  {
+    imageUrl: "/monatge.jpg",
+    title: "Expertise et Qualité Garanties",
+    description:
+      "Bénéficiez de l'expertise de nos techniciens qualifiés et d'un équipement de pointe pour un service irréprochable. Votre sécurité et votre satisfaction sont notre priority absolue.",
+    buttonText: "Prendre rendez-vous",
+    buttonLink: "#appointment",
+    icon: Sparkles,
+  },
+];
 export default function HomePage() {
-  const testimonials = [
-    {
-      quote:
-        "Un service exceptionnel et des professionnels à l'écoute. Mes pneus ont été changés rapidement et avec une grande précision. Je recommande vivement Go Pneu 92 pour leur expertise et leur accueil chaleureux.",
-      author: "Jean-Luc D.",
-      avatarUrl: "/placeholder.svg?height=80&width=80",
-      rating: 5,
-    },
-    {
-      quote:
-        "J'ai été impressionné par la rapidité et l'efficacité de l'équipe. Le rapport qualité-prix est excellent, et mes pneus d'occasion sont comme neufs. Une adresse à retenir à Meudon !",
-      author: "Sophie L.",
-      avatarUrl: "/placeholder.svg?height=80&width=80",
-      rating: 5,
-    },
-    {
-      quote:
-        "Toujours un plaisir de venir chez Go Pneu 92. Le personnel est très aimable et compétent. Ils prennent le temps d'expliquer les choses et le travail est toujours impeccable. Merci !",
-      author: "Marc P.",
-      avatarUrl: "/placeholder.svg?height=80&width=80",
-      rating: 4,
-    },
-    {
-      quote:
-        "Service rapide et efficace. L'équipe est très professionnelle et les prix sont justes. Je suis très satisfait de mes nouveaux pneus.",
-      author: "Pierre D.",
-      avatarUrl: "/placeholder.svg?height=80&width=80",
-      rating: 5,
-    },
-    {
-      quote:
-        "J'ai eu un problème de pneu en urgence, et Go Pneu 92 a été incroyablement réactif. Ils ont résolu mon problème en un rien de temps. Un grand merci !",
-      author: "Nathalie R.",
-      avatarUrl: "/placeholder.svg?height=80&width=80",
-      rating: 4,
-    },
-  ];
-  const heroSlides = [
-    {
-      imageUrl: "/home.jpg",
-      title: "Service pneumatique à Meudon",
-      description:
-        "Découvrez Go Pneu 92, votre partenaire local pour tous vos besoins en pneumatiques. Nous proposons divers services allant de la vente de pneus neufs ou d'occasion au montage, démontage, gonflage et équilibrage de vos roues. Notre objectif est de garantir une conduite sécurisée grâce à un équipement de qualité et des prestations réalisées par nos experts.",
-      buttonText: "Optimisez vos roues",
-      buttonLink: "#services",
-      icon: Wrench,
-    },
-    {
-      imageUrl: "/Gonfler-pneus-entretien.jpeg",
-      title: "Pneus Neufs et Occasion",
-      description:
-        "Explorez notre vaste sélection de pneus neufs et d'occasion de toutes marques. Trouvez la solution parfaite pour votre véhicule et votre budget, avec des conseils d'experts pour vous guider.",
-      buttonText: "Voir nos pneus",
-      buttonLink: "#services",
-      icon: Car,
-    },
-    {
-      imageUrl: "/monatge.jpg",
-      title: "Expertise et Qualité Garanties",
-      description:
-        "Bénéficiez de l'expertise de nos techniciens qualifiés et d'un équipement de pointe pour un service irréprochable. Votre sécurité et votre satisfaction sont notre priority absolue.",
-      buttonText: "Prendre rendez-vous",
-      buttonLink: "#appointment",
-      icon: Sparkles,
-    },
-  ];
-
   return (
     <div className="flex flex-col min-h-screen  text-foreground font-sans">
       {/* Hero Slider Section */}
@@ -393,41 +385,7 @@ export default function HomePage() {
           </svg>
         </div>
         <div className="container mx-auto px-6 md:px-10">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-800">
-              Ce que nos clients disent
-            </h2>
-            <p className="text-xl text-gray-600 mt-4 max-w-3xl mx-auto">
-              Votre confiance est notre plus grande récompense. Voici quelques
-              avis de nos clients satisfaits.
-            </p>
-            <div className="w-24 h-1.5 bg-blue-700 mx-auto mt-6 rounded-full" />
-          </div>
-          <TestimonialCarousel
-            testimonials={[
-              {
-                quote:
-                  "Service rapide et efficace ! J'ai fait changer mes pneus et je suis très satisfait du résultat. L'équipe est professionnelle et accueillante.",
-                author: "Julien M.",
-                avatarUrl: "/user1.jpg",
-                rating: 5,
-              },
-              {
-                quote:
-                  "Très bon rapport qualité-prix. J'ai trouvé des pneus d'occasion en excellent état. Je recommande vivement Go Pneu 92.",
-                author: "Sophie L.",
-                avatarUrl: "/user2.jpg",
-                rating: 5,
-              },
-              {
-                quote:
-                  "Accueil chaleureux et conseils avisés. On sent que l'équipe maîtrise son sujet. Je reviendrai sans hésiter pour l'entretien de mes pneus.",
-                author: "Marc D.",
-                avatarUrl: "/user3.jpg",
-                rating: 4,
-              },
-            ]}
-          />
+          <AnimatedTestimonials testimonials={testimonials} />
         </div>
       </section>
 

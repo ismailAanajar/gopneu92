@@ -45,14 +45,16 @@ const Footer = (props: Props) => {
         <div className="text-center md:text-left">
           <h3 className="text-xl font-semibold text-white mb-5">Contact</h3>
           <p className="flex items-center justify-center md:justify-start gap-3 mb-3 text-base">
-            <Phone className="h-5 w-5 text-blue-700" /> +33 1 23 45 67 89
+            <Phone className="h-5 w-5 text-blue-700" />{" "}
+            <a href="tel:+33783955937">+33 783955937</a>
           </p>
           <p className="flex items-center justify-center md:justify-start gap-3 mb-3 text-base">
-            <Mail className="h-5 w-5 text-blue-700" /> contact@gopneu92.fr
+            <Mail className="h-5 w-5 text-blue-700" />{" "}
+            <a href="mail:gopneu92@gmail.com">gopneu92@gmail.com</a>
           </p>
           <p className="flex items-center justify-center md:justify-start gap-3 text-base">
-            <MapPin className="h-5 w-5 text-blue-700" /> 123 Rue de la Pneu,
-            92190 Meudon
+            <MapPin className="h-5 w-5 text-blue-700" /> 8 Rue Saint-Exupéry,
+            92360 Meudon, France.
           </p>
         </div>
         <div className="text-center md:text-right">
@@ -95,8 +97,7 @@ const Footer = (props: Props) => {
       </div>
       <Separator className="my-12 bg-gray-800" />
       <div className="container mx-auto px-6 md:px-10 text-center text-gray-500 text-sm">
-        <p>&copy; 2025 GO PNEU 92. Tous droits réservés.</p>
-        <p className="mt-2">Créé par ismailAnajar</p>
+        <p>&copy; 8 Rue Saint-Exupéry, 92360 Meudon, France.</p>
       </div>
     </footer>
   );

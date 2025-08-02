@@ -18,7 +18,7 @@ const quick = Quicksand({
 export const metadata: Metadata = {
   title: "GoPneu - Spécialiste Pneumatiques | Vente, Montage & Services",
   description:
-    "GoPneu, votre expert en pneumatiques. Vente de pneus neufs et d'occasion, montage, équilibrage, gonflage. Service professionnel, prix compétitifs. Devis gratuit.",
+    "GoPneu, votre expert en pneumatiques. Vente de pneus neufs et d'occasion, montage, équilibrage, gonflage. Service professionnel, prix compétitifs.",
   keywords:
     "pneus, pneumatiques, montage, équilibrage, gonflage, vente pneus neufs, pneus occasion, garage, automobile, GoPneu",
   authors: [{ name: "GoPneu92" }],
