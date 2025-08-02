@@ -50,7 +50,7 @@ const Footer = (props: Props) => {
           </p>
           <p className="flex items-center justify-center md:justify-start gap-3 mb-3 text-base">
             <Mail className="h-5 w-5 text-blue-700" />{" "}
-            <a href="mail:gopneu92@gmail.com">gopneu92@gmail.com</a>
+            <a href="mailto:gopneu92@gmail.com">gopneu92@gmail.com</a>
           </p>
           <Link
             href={"https://maps.app.goo.gl/qAfgiw4q5pt5LmKQ7"}
