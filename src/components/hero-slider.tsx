@@ -180,7 +180,7 @@ export function HeroSlider({ slides, interval = 4000 }: HeroSliderProps) {
         <CarouselNext className="hidden lg:flex absolute right-4 top-1/2 -translate-y-1/2 z-30 bg-white/20 hover:bg-white/40 text-white border-none h-12 w-12" />
         <div className="absolute hidden lg:block  top-1/2 -translate-y-1/2  right-20 w-fit ">
           <div
-            className="relative max-w-md mx-auto py-6 px-8 bg-white rounded-3xl text-gray-800
+            className="relative max-w-md mx-auto py-6 px-8 bg-white/10 outline-blue-500 outline-4 outline-offset-4 rounded-3xl text-gray-800
                  shadow-[0_15px_40px_rgba(0,0,0,0.1),_0_6px_18px_rgba(0,0,0,0.05)]
                  border border-gray-100
                  transform transition-all duration-500 ease-out hover:scale-[1.008]
