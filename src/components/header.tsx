@@ -120,7 +120,7 @@ const Header = () => {
         </nav>
         <a
           className="ml-auto mr-4 lg:block"
-          href="whatsapp://send?text=Hello World!&phone=+212709446968"
+          href="whatsapp://send?text=Bonjour, je souhaite obtenir des informations sur vos services de pneus!&phone=+33783955937"
         >
           <svg
             height="30"
