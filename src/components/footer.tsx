@@ -9,7 +9,7 @@ type Props = {};
 
 const Footer = (props: Props) => {
   return (
-    <footer className="w-full py-12 bg-gray-950 text-gray-300 text-sm relative overflow-hidden">
+    <footer className="w-full py-12  text-slate-800 text-sm relative overflow-hidden">
       {/* Top wave */}
       <div className="absolute top-0 left-0 w-full h-16 md:h-20 lg:h-24 text-white transform rotate-180">
         <svg
@@ -31,12 +31,7 @@ const Footer = (props: Props) => {
             className="text-3xl font-extrabold text-blue-700 mb-4 tracking-tight"
             prefetch={false}
           >
-            <Image
-              src="/logo-white.png"
-              alt="Go Pneu 92"
-              width={140}
-              height={100}
-            />
+            <Image src="/logo2.png" alt="Go Pneu 92" width={200} height={100} />
           </Link>
           <p className="text-center md:text-left text-base leading-relaxed">
             Votre expert en pneumatiques à Meudon, engagé pour votre sécurité et

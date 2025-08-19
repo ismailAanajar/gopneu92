@@ -70,28 +70,28 @@ const testimonials = [
 
 const heroSlides = [
   {
-    imageUrl: "/home.jpg",
-    title: "Service pneumatique à Meudon",
+    imageUrl: "/montage-de-pneus.png",
+    title: "Montage de pneus",
     description:
-      "Go Pneu 92, votre expert local en pneus neufs et d’occasion. Montage, démontage, équilibrage et gonflage pour une conduite en toute sécurité.",
+      "Montage précis de pneus neufs ou d’occasion avec équipements modernes, pour une conduite sûre. Montage gratuit avec la promotion 'Loi Montagne'.",
     buttonText: "Optimisez vos roues",
     buttonLink: "#services",
     icon: Wrench,
   },
   {
-    imageUrl: "/Gonfler-pneus-entretien.jpeg",
-    title: "Pneus Neufs et Occasion",
+    imageUrl: "/gonflage.png",
+    title: "Gonflage et équilibrage de vos pneus",
     description:
-      "Explorez notre vaste sélection de pneus neufs et d'occasion de toutes marques. Trouvez la solution parfaite pour votre véhicule et votre budget, avec des conseils d'experts pour vous guider.",
+      "Nous assurons un gonflage conforme et un équilibrage précis pour garantir sécurité, confort et longévité de vos pneus.",
     buttonText: "Voir nos pneus",
     buttonLink: "#services",
     icon: Car,
   },
   {
-    imageUrl: "/monatge.jpg",
-    title: "Expertise et Qualité Garanties",
+    imageUrl: "/demontage.png",
+    title: "Démontage de pneus",
     description:
-      "Bénéficiez de l'expertise de nos techniciens qualifiés et d'un équipement de pointe pour un service irréprochable. Votre sécurité et votre satisfaction sont notre priority absolue.",
+      "Nous démontons vos pneus avec soin et sécurité pour préparer vos roues à de nouveaux pneumatiques.",
     buttonText: "Prendre rendez-vous",
     buttonLink: "#appointment",
     icon: Sparkles,
@@ -249,13 +249,13 @@ export default function HomePage() {
           </svg>
         </div>
         <div className="container mx-auto px-6 md:px-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div className="lg:order-2 relative p-4">
+          <div className="lg:order-2 relative ">
             <Image
-              src="/home.jpg"
+              src="/about2.png"
               alt="À propos de Go Pneu 92"
-              width={800}
-              height={600}
-              className="rounded-2xl shadow-2xl w-full h-auto transform rotate-1 hover:rotate-0 transition-transform duration-500"
+              width={900}
+              height={800}
+              className="rounded-2xl w-full shadow-2xl h-[400px]  transform rotate-1 hover:rotate-0 transition-transform duration-500"
             />
             <div className="absolute -bottom-8 -left-8 w-48 h-48 bg-blue-700 rounded-full mix-blend-multiply blur-2xl opacity-10" />
             <div className="absolute -top-8 -right-8 w-64 h-64 bg-yellow-500 rounded-full mix-blend-multiply blur-2xl opacity-10" />

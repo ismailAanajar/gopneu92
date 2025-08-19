@@ -57,7 +57,7 @@ const Header = () => {
           className="text-3xl font-extrabold text-blue-800 tracking-tight"
         >
           <Image
-            src={scrolled ? "/logo.png" : "/logo-white.png"}
+            src={"/logo2.png"}
             alt="logo"
             width={100}
             height={40}
@@ -68,7 +68,7 @@ const Header = () => {
           <Link
             href="/"
             className={cn(
-              "text-base font-medium text-white hover:text-blue-500 transition-colors relative group",
+              "text-base font-medium text-black hover:text-blue-500 transition-colors relative group",
               {
                 "text-black": scrolled,
                 "text-blue-500": pathanme === "/",
@@ -81,7 +81,7 @@ const Header = () => {
           <Link
             href="/a-propos"
             className={cn(
-              "text-base font-medium text-white hover:text-blue-500 transition-colors relative group",
+              "text-base font-medium text-black hover:text-blue-500 transition-colors relative group",
               {
                 "text-black": scrolled,
                 "text-blue-500": pathanme === "/a-propos",
@@ -94,7 +94,7 @@ const Header = () => {
           <Link
             href="/services"
             className={cn(
-              "text-base font-medium text-white hover:text-blue-500 transition-colors relative group",
+              "text-base font-medium text-black hover:text-blue-500 transition-colors relative group",
               {
                 "text-black": scrolled,
                 "text-blue-500": pathanme === "/services",
@@ -107,7 +107,7 @@ const Header = () => {
           <Link
             href="/contact"
             className={cn(
-              "text-base font-medium text-white hover:text-blue-500 transition-colors relative group",
+              "text-base font-medium text-black hover:text-blue-500 transition-colors relative group",
               {
                 "text-black": scrolled,
               }

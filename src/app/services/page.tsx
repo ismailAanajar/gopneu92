@@ -25,22 +25,22 @@ import {
 
 export default function ServicesPage() {
   return (
-    <div className="flex flex-col min-h-screen bg-gray-50 text-foreground font-sans">
+    <div className="flex flex-col min-h-screen  text-foreground font-sans">
       {/* Header (reused from app/page.tsx - not included here to avoid duplication) */}
       {/* You would typically include your Header component here */}
 
       <main className="flex-1">
         {/* Services Hero Section - Clean and impactful */}
-        <section className="w-full py-20 md:py-32 bg-gradient-to-r from-blue-800/30 to-blue-950 relative overflow-hidden pt-32">
+        <section className="w-full py-20 md:py-32 relative overflow-hidden pt-32">
           <Image
-            src="/banner.jpg"
+            src="/services.png"
             alt="Car illustration"
             layout="fill"
             objectFit="cover"
-            className="absolute  right-0 bottom-0 h-full w-full object-cover opacity-10"
+            className="absolute  right-0 bottom-0 h-full w-full object-cover "
           />
-          <div className="absolute inset-0 bg-blue-950/60 z-0" />
-          <div className="container mx-auto px-6 md:px-10 relative z-10 text-white text-center">
+          <div className="absolute inset-0 bg-gradient-to-br from-white/90 from-40% to-blue-950/10  z-0" />
+          <div className="container mx-auto px-6 md:px-10 relative z-10 text-slate-900 text-center">
             <h1 className="text-4xl md:text-6xl font-extrabold leading-tight mb-6 drop-shadow-md">
               Nos Services Complets
               <span className="block w-24 h-1 bg-yellow-500 mx-auto mt-4 rounded-full" />
@@ -178,9 +178,9 @@ export default function ServicesPage() {
             </svg>
           </div>
           <div className="container mx-auto px-6 md:px-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="relative p-4">
+            <div className="relative ">
               <Image
-                src="/Vente de pneus neufs.webp"
+                src="/vente.png"
                 alt="Vente de pneus neufs et d'occasion"
                 width={800}
                 height={600}
@@ -196,13 +196,12 @@ export default function ServicesPage() {
                 <span className="block w-24 h-1 bg-blue-700 mt-4 rounded-full mx-auto lg:mx-0" />
               </h2>
               <p className="text-xl text-gray-700 leading-relaxed mb-8">
-                Nous proposons une vaste gamme de pneus neufs et
-                d&apos;occasion, adaptés à tous types de véhicules et à tous les
-                budgets. Nos experts vous guident dans le choix idéal pour
-                garantir votre sécurité et optimiser les performances de votre
-                véhicule sur la route. Que vous recherchiez des pneus pour une
-                voiture, un utilitaire ou une moto, nous avons les modèles
-                qu&apos;il vous faut.
+                Nous proposons des pneus neufs et d’occasion pour répondre à
+                tous vos besoins. Que vous soyez à la recherche de roues pour
+                une voiture, un utilitaire ou une moto, nous avons les modèles
+                qu’il vous faut. Nous vous conseillons sur le choix du modèle en
+                fonction de votre véhicule et de vos besoins, pour vous garantir
+                une sécurité optimale sur la route.
               </p>
               <Button className="bg-blue-700 hover:bg-blue-800 text-white px-8 py-3 text-lg rounded-full shadow-md">
                 Découvrir notre catalogue{" "}
@@ -232,9 +231,9 @@ export default function ServicesPage() {
           className="w-full py-20 md:py-32 bg-white relative overflow-hidden"
         >
           <div className="container mx-auto px-6 md:px-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="lg:order-2 relative p-4">
+            <div className="lg:order-2 relative ">
               <Image
-                src="/montage equilibrage.webp"
+                src="/montage2.png"
                 alt="Montage de pneus"
                 width={800}
                 height={600}
@@ -246,16 +245,17 @@ export default function ServicesPage() {
             <div className="lg:order-1 text-center lg:text-left">
               {/* <WrenchIcon className="h-16 w-16 mx-auto lg:mx-0 mb-6 text-blue-700" /> */}
               <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
-                Montage et Démontage de pneus
+                Montage de pneus
                 <span className="block w-24 h-1 bg-blue-700 mt-4 rounded-full mx-auto lg:mx-0" />
               </h2>
               <p className="text-xl text-gray-700 leading-relaxed mb-8">
-                Nous assurons le montage et le démontage de vos pneus avec le
-                plus grand soin et une précision inégalée, grâce à nos
-                équipements de pointe. Que ce soit pour l&apos;installation de
-                pneus neufs ou le retrait de pneus usés, notre équipe garantit
-                un ajustement parfait et une manipulation sans risque de
-                détérioration.
+                Nous assurons le montage de vos pneus avec soin et précision
+                grâce à des équipements modernes. Nous nous occupons de
+                <strong>l'installation de vos pneus neufs</strong> ou d'occasion
+                en atelier, en veillant à un ajustement parfait. Le montage est
+                une étape essentielle pour garantir une conduite stable et
+                sécurisée. Profitez également de notre montage gratuit dans le
+                cadre de notre promotion "Loi Montagne".
               </p>
               <Button className="bg-blue-700 hover:bg-blue-800 text-white px-8 py-3 text-lg rounded-full shadow-md">
                 En savoir plus sur le montage{" "}
@@ -285,9 +285,9 @@ export default function ServicesPage() {
           className="w-full py-20 md:py-32 bg-gray-100 relative overflow-hidden"
         >
           <div className="container mx-auto px-6 md:px-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="relative p-4">
+            <div className="relative ">
               <Image
-                src="/gonflage de pneu.webp"
+                src="/gonflage-equilibre.png"
                 alt="Gonflage et équilibrage de vos pneus"
                 width={800}
                 height={600}
@@ -303,14 +303,69 @@ export default function ServicesPage() {
                 <span className="block w-24 h-1 bg-blue-700 mt-4 rounded-full mx-auto lg:mx-0" />
               </h2>
               <p className="text-xl text-gray-700 leading-relaxed mb-8">
-                Un gonflage précis et un équilibrage parfait sont cruciaux pour
-                votre sécurité, le confort de conduite et la longévité de vos
-                pneus. Nous ajustons la pression selon les spécifications du
-                fabricant et effectuons un équilibrage minutieux pour éviter les
-                vibrations et l&apos;usure irrégulière.
+                Un bon <strong>gonflage des pneus</strong> et un équilibrage
+                efficace sont essentiels pour assurer la sécurité et le confort
+                de conduite. Nous effectuons le gonflage de vos pneus selon les
+                spécifications du fabricant, optimisant ainsi la performance de
+                votre véhicule. Nous proposons également un équilibrage des
+                pneumatiques pour éviter les vibrations et l'usure prématurée.
+                Nous assurons des interventions rapides et professionnelles.
               </p>
               <Button className="bg-blue-700 hover:bg-blue-800 text-white px-8 py-3 text-lg rounded-full shadow-md">
                 Optimiser la performance{" "}
+                <ChevronRight className="ml-2 h-4 w-4" />
+              </Button>
+            </div>
+          </div>
+          {/* Wave separator */}
+          <div className="absolute bottom-0 left-0 w-full h-24 md:h-32 lg:h-48 text-white">
+            <svg
+              viewBox="0 0 1440 320"
+              xmlns="http://www.w3.org/2000/svg"
+              className="w-full h-full"
+              preserveAspectRatio="none"
+            >
+              <path
+                fill="currentColor"
+                d="M0,224L48,213.3C96,203,192,181,288,186.7C384,192,480,224,576,245.3C672,267,768,277,864,256C960,235,1056,181,1152,160C1248,139,1344,149,1392,154.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+              ></path>
+            </svg>
+          </div>
+        </section>
+        {/* Service Deep Dive: Demontage de pneus (Alternating layout) */}
+        <section
+          id="Montage & Équilibrage"
+          className="w-full py-20 md:py-32 bg-white relative overflow-hidden"
+        >
+          <div className="container mx-auto px-6 md:px-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="lg:order-2 relative ">
+              <Image
+                src="/demontage2.png"
+                alt="Montage de pneus"
+                width={800}
+                height={600}
+                className="rounded-2xl shadow-2xl w-full h-auto transform -rotate-1 hover:rotate-0 transition-transform duration-500"
+              />
+              <div className="absolute -bottom-8 -right-8 w-48 h-48 bg-blue-700 rounded-full mix-blend-multiply blur-2xl opacity-10" />
+              <div className="absolute -top-8 -left-8 w-64 h-64 bg-yellow-500 rounded-full mix-blend-multiply blur-2xl opacity-10" />
+            </div>
+            <div className="lg:order-1 text-center lg:text-left">
+              {/* <WrenchIcon className="h-16 w-16 mx-auto lg:mx-0 mb-6 text-blue-700" /> */}
+              <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+                Démontage de pneus
+                <span className="block w-24 h-1 bg-blue-700 mt-4 rounded-full mx-auto lg:mx-0" />
+              </h2>
+              <p className="text-xl text-gray-700 leading-relaxed mb-8">
+                Le démontage des pneus est une étape délicate qui nécessite un
+                savoir-faire particulier. Nous nous occupons de{" "}
+                <strong>retirer vos pneus</strong> usés ou endommagés avec soin,
+                afin de préparer vos roues pour l'installation de nouveaux
+                pneumatiques. Nous utilisons des outils adaptés pour un
+                démontage sans risque de détérioration. Comptez sur notre
+                expertise pour assurer cette prestation en toute sécurité.
+              </p>
+              <Button className="bg-blue-700 hover:bg-blue-800 text-white px-8 py-3 text-lg rounded-full shadow-md">
+                En savoir plus sur le montage{" "}
                 <ChevronRight className="ml-2 h-4 w-4" />
               </Button>
             </div>
@@ -330,9 +385,8 @@ export default function ServicesPage() {
             </svg>
           </div>
         </section>
-
         {/* Pricing Section - Redesigned with New Structure and Concept */}
-        <section className="w-full py-24 md:py-44 bg-gray-50 relative">
+        <section className="w-full py-24 md:py-44 bg-gray-100 relative">
           {/* Top wave */}
           <div className="absolute top-0 left-0 w-full h-24 md:h-32 lg:h-48 text-gray-100 transform rotate-180">
             <svg

@@ -68,7 +68,7 @@ export function HeroSlider({ slides, interval = 4000 }: HeroSliderProps) {
   );
 
   return (
-    <section className="relative w-full  text-white overflow-hidden">
+    <section className="relative w-full  text-slate-800 overflow-hidden">
       <Carousel
         setApi={setApi}
         className="w-full h-full"
@@ -102,11 +102,11 @@ export function HeroSlider({ slides, interval = 4000 }: HeroSliderProps) {
                       src={slide.imageUrl}
                       alt={slide.title}
                       fill
-                      className="object-cover z-0 opacity-50"
+                      className="object-cover z-0 "
                       priority={index === 0}
                     />
                   </motion.div>
-                  <div className="absolute inset-0 bg-gradient-to-r to-blue-800/30 from-blue-950 z-10" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-20% to-80% to-transparent  from-white z-10" />
 
                   {/* Animated Content */}
                   <div className="relative z-20 flex flex-col lg:px-20 justify-center h-full  w-full lg:w-[55%] p-6">
